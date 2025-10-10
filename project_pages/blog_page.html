@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../main_css/main.css">
+    <link rel="stylesheet" href="../styles/color_and_responsive/global.css">
+    <style>
+        .blog-page {
+            padding: 30px 0;
+        }
+
+        .box-img {
+            width: 100%;
+        }
+
+        .blog-page .box {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 50px;
+        }
+
+        .blog-page p {
+            color: gray;
+        }
+
+        .move-to {
+
+            margin-bottom: 30px;
+        }
+
+        .blog-page .down {
+            display: flex;
+            gap: 30px;
+        }
+        .blog-page .down .left{
+            width: 70%;
+        }
+        .blog-page .down .right{
+            width: 30%;
+        }
+
+        @media (max-width:992px) {
+             .blog-page .down {
+                flex-direction: column;
+                .right{
+                    width: 100%;
+                }
+                .left{
+                    width: 100%;
+                }
+             }
+        }
+        .post {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .post img {
+            width: 75px;
+            height: 75px;
+            object-fit: cover;
+            border-radius: 100%;
+        }
+
+        .post p {
+            color: black;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .post span {
+            color: gray;
+            font-size: 13px;
+        }
+
+        .blog-page .right .up {
+            margin-bottom: 20px;
+        }
+
+        .blog-page .right .card-box {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .card {
+                padding: 10px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                color: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+           <header>
+        <div class="container">
+            <div class="upper">
+                <ul>
+                    <li>
+                        <a href="">About Us</a>
+                    </li>
+                    <li>
+                        <a href="">My Account</a>
+                    </li>
+                    <li>
+                        <a href="">Wishlist</a>
+                    </li>
+                    <li>
+                        <p>we deliver to you every day from <span style="color: orangered;"> 7:00 to 23:00</span></p>
+                    </li>
+                </ul>
+
+
+                <ul class="settings">
+                    <li>
+                        English
+                    </li>
+                    <li>
+                        USD
+                    </li>
+                    <li>
+                        Order Tracking
+                    </li>
+                </ul>
+            </div>
+            <div class="middle">
+                <div class="left">
+                    <div class="store">
+                        <a style="display: flex; gap:10px; align-items:center;" href="../index.html">
+                            <img src="../imgs/Header/logo.svg" alt="">
+                            <h1>jinStore</h1>
+                        </a>
+                    </div>
+                    <div class="location">
+                        <img src="../imgs/Header/location.svg" alt="">
+                        <span class="DeliverTo">
+                            <span style="color: gray;">Deliver to</span>
+                            <span>all</span>
+                        </span>
+                    </div>
+                </div>
+                <input type="text" placeholder="search">
+                <ul>
+                    <a href="">
+                        <li>
+                            <a href="./login.html">
+                                <img src="../imgs/Header/profile.svg" alt="">
+                            </a>
+                    </a>
+                    </li>
+                    <li>
+                        <a href="./register.html" style="color: gray;">sign in</a>
+                        <a href="">account</a>
+
+                    </li>
+
+                
+                    <li>
+                        <a class="love" href="./favouritePage.html">
+                            <img src="../imgs/Header/love.svg" alt="">
+                        </a>
+                        <span class="counter-love">0</span>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="../imgs/Header/cart.svg" alt="">
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <hr style="width:100%">
+            <div class="bottom">
+
+                <ul>
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="../project_pages/allProduct_page.html">Shop</a>
+                    </li>
+                    <li>
+                        <a href="./allProduct_page.html">Fruits & Vegetables</a>
+                    </li>
+                    <li>
+                        <a href="./allProduct_page.html">Beverages</a>
+                    </li>
+                    <li>
+                        <a href="">Blog</a>
+                    </li>
+                    <li>
+                        <a href="./contact_page.html">Contact</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        trending products
+                    </li>
+                    <li style="color: orangered;">
+                        Almost finished
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="blog-page">
+        <div class="container">
+            <div class="move-to">
+                <a href="../index.html">Home</a>
+                <span>&gt</span>
+                <a href="">Blog</a>
+            </div>
+            <div class="down">
+                <div class="left">
+                </div>
+                <div class="right">
+                    <div class="up">
+                        <h5>Blog Post List</h5>
+
+                    </div>
+                    <hr>
+                    <div class="card-box">
+                        <h5>Social Media Widget</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let counter = document.querySelector(".counter-love");
+        if(localStorage.getItem("faverArayy")){
+counter.innerHTML = JSON.parse(localStorage.getItem("faverArayy")).length 
+        }
+           else{
+            counter.innerHTML = 0
+        }
+        let infos = [
+            {
+                img: "../imgs/blog-1.svg",
+                title: "How grocers are approaching delivery as the market evolves",
+            },
+            {
+                img: "../imgs/blog-2.svg",
+                title: "The Friday Checkout: Food insecurity keeps retailers off balance",
+            },
+            {
+                img: "../imgs/blog-3.svg",
+                title: "Consumer want grocer to use AI to help them save money Dunnhumby",
+            }
+        ]
+
+        let boxesContainer = document.querySelector(".blog-page .left");
+        let postsContainer = document.querySelector(".blog-page .right .up");
+        let cardsContainer = document.querySelector(".blog-page .right .card-box");
+
+        for (info of infos) {
+
+            let box = `
+                <div class="box">
+                    <img class="box-img" src="${info.img}" alt="">
+                    <h1>${info.title}</h1>
+                    <div class="time">
+                        <span>November 3, 2023</span>
+                        <span>Klbtheme, store, themeforest </span>
+                    </div>
+                    <p>Bilmålvakt treskade i nibel den mobilmissbruk deren jyn nöning osk heterostik i rel ultran.
+                        Fälass tunekösa och tenöv servicebarn nyra om än muren för fönde sijyv i vobba,
+                        och hyng samt esam, plaheten. Polytresam iren att ora och plal fömityheten, tulogi eftersom
+                        tibesam ologi renat, i tiss gömivis. Supraskop prebelig för att psykolog geon sper</p>
+                    <button class="btn">Read More</button>
+                </div>
+             
+        `
+            boxesContainer.innerHTML += box;
+
+            let post =
+                `
+                <div class="post">
+                    <img src="${info.img}" alt="">
+                    <div>
+                        <p>${info.title}</p>
+                        <span>November 3, 2023</span>
+                    </div>
+                </div>
+            `
+            postsContainer.innerHTML += post
+        }
+
+        let socials =
+            [
+                {
+                    color: "1877F2",
+                    img: "../imgs/s-1.png",
+                    name: "facebook",
+                },
+                {
+                    color: "1DA1F2",
+                    img: "../imgs/s-2.png",
+                    name: "twitter",
+
+                },
+                {
+                    color: "FD1D1D",
+                    img: "../imgs/s-3.png",
+                    name: "instagram",
+
+                },
+                {
+                    color: "0077B5",
+                    img: "../imgs/s-4.png",
+                    name: "linkedin",
+
+                },
+            ]
+
+        for (s of socials) {
+            let card =
+                `
+                <div class="card" style="background-color: #${s.color};">
+                        <img src="${s.img}" alt="">
+                        ${s.name}
+                </div>
+        `
+
+            cardsContainer.innerHTML += card
+        }
+
+    </script>
+</body>
+
+</html>

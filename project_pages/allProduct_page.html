@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../main_css/main.css">
+    <link rel="stylesheet" href="../styles/color_and_responsive/global.css">
+    <style>
+        ::view-transition-group(root) {
+            animation-duration: .5s;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <div class="container">
+            <div class="upper">
+                <ul>
+                    <li>
+                        <a href="">About Us</a>
+                    </li>
+                    <li>
+                        <a href="">My Account</a>
+                    </li>
+                    <li>
+                        <a href="">Wishlist</a>
+                    </li>
+                    <li>
+                        <p>we deliver to you every day from <span style="color: orangered;"> 7:00 to 23:00</span></p>
+                    </li>
+                </ul>
+
+
+                <ul class="settings">
+                    <li>
+                        English
+                    </li>
+                    <li>
+                        USD
+                    </li>
+                    <li>
+                        Order Tracking
+                    </li>
+                </ul>
+            </div>
+            <div class="middle">
+                <div class="left">
+                    <div class="store">
+                       <a style="display: flex; gap:10px; align-items:center;" href="../index.html">
+                         <img src="../imgs/Header/logo.svg" alt="">
+                         <h1>jinStore</h1>
+                       </a>
+                    </div>
+                    <div class="location">
+                        <img src="../imgs/Header/location.svg" alt="">
+                        <span class="DeliverTo">
+                            <span style="color: gray;">Deliver to</span>
+                            <span>all</span>
+                        </span>
+                    </div>
+                </div>
+                <input type="text" placeholder="search">
+                <ul>
+                    <a href="">
+                        <li>
+                            <a href="./login.html">
+                                <img src="../imgs/Header/profile.svg" alt="">
+                            </a>
+                    </a>
+                    </li>
+                    <li>
+                        <a href="./register.html" style="color: gray;">sign in</a>
+                        <a href="">account</a>
+
+                    </li>
+
+
+                    <li>
+                        <a class="love" href="./favouritePage.html">
+                            <img src="../imgs/Header/love.svg" alt="">
+                        </a>
+                        <span class="counter-love">0</span>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <img src="../imgs/Header/cart.svg" alt="">
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <hr style="width:100%">
+            <div class="bottom">
+
+                <ul>
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./allProduct_page.html">Shop</a>
+                    </li>
+                    <li>
+                        <a href="./allProduct_page.html">Fruits & Vegetables</a>
+                    </li>
+                    <li>
+                        <a href="./allProduct_page.html">Beverages</a>
+                    </li>
+                    <li>
+                        <a href="./blog_page.html">Blog</a>
+                    </li>
+                    <li>
+                        <a href="./contact_page.html">Contact</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        trending products
+                    </li>
+                    <li style="color: orangered;">
+                        Almost finished
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="allProduct-page">
+        <div class="container">
+            <div class="left">
+                <div class="move-to">
+                    <a href="../index.html">Home</a>
+                    <span>&gt</span>
+                    <a href="">Shop</a>
+                </div>
+
+                <div class="widget-price-filter">
+                    <h5>Widget price filter</h5>
+                    <div class="range-price">
+                        <div class="min">
+                            <label for="min">Min Price</label><br>
+                            <input type="text" name="min" placeholder="0">
+                        </div>
+                        <div class="min max">
+                            <label for="max">Max Price</label><br>
+                            <input type="text" name="max">
+                        </div>
+                    </div>
+                    <input type="range">
+                    <div class="filter-div">
+                        <span>Price: $0 — <span class="max">0</span>$</span>
+                        <button>filter</button>
+                    </div>
+                </div>
+                <hr>
+                <div class="product-categories">
+                    <h5>Product Categories</h5>
+                </div>
+                <hr>
+                <div class="filter-by-color">
+                    <h5>Filter by Color</h5>
+                    <div>
+                        <input type="color">
+                        <span>color</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="filter-by-brands">
+                    <h5>Filter by Brands</h5>
+                    <input type="checkbox" for="fresh">
+                    <label for="fresh">Fresh</label><br>
+                </div>
+                <hr>
+                <div class="filter-by-statues">
+                    <h5>Product Status</h5>
+                    <input type="checkbox" for="stock">
+                    <label for="stock">In Stock</label><br>
+                    <input type="checkbox" for="sale">
+                    <label for="sale">On Sale</label><br>
+                </div>
+            </div>
+            <div class="right">
+                   <div class="product-on-this-week">
+      <img src="../imgs/Home/onThisWeek-6.png" alt="">
+      
+          <div class="content">
+              <h5>Only This Week</h5>
+                <h1>Grocery store with different</h1>
+                      <p>We have prepared special discounts for you on grocery
+products...</p>
+            <button  class="view-all-btn">Shop Now</button>
+        </div>
+    </div>
+                <div class="items-big-box">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+            <footer>
+        <div class="container">
+            <div class="up-footer">
+                <div class="left">
+                    <h5>Join our newsletter for £10 offs</h5>
+                    <p>Register now to get latest updates on promotions &
+                        coupons.Don’t worry, we not spam!</p>
+                </div>
+                <div class="right">
+                    <div class="email-input">
+                        <input type="text" placeholder="Enter your email address">
+                        <button class="btn" type="submit">SEND</button>
+                    </div>
+                    <p>By subscribing you agree <span>to our Terms & Conditions and Privacy & Cookies Policy</span></p>
+                </div>
+            </div>
+            <hr>
+            <div class="mid-footer">
+                <div class="box">
+                    <h5>Do You Need Help ?</h5>
+                    <span>Autoseligen syr. Nek diarask fröbomba. Nör
+                        antipol kynoda nynat. Pressa fåmoska</span>
+
+                    <div class="phone">
+                        <img src="../imgs/footer-imgs/tel.png" alt="">
+                        <span class="text">
+                            <p>Monday-Friday: 08am-9pm</p>
+                            <h5>0 800 300-353</h5>
+                        </span>
+                    </div>
+
+                    <div class="email-us">
+                        <img src="../imgs/footer-imgs/email.png" alt="">
+                        <span class="text">
+                            <p>Monday-Friday: 08am-9pm</p>
+                            <h6>info@example.com</h6>
+                        </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <h5>Make Money with Us</h5>
+                    <div class="text">
+                        <span>Sell on Grogin</span>
+                        <span>Sell Your Services on Grogin</span>
+                        <span>Sell on Grogin Business</span>
+                        <span>Sell Your Apps on Grogin</span>
+                        <span>Become an Affilate</span>
+                        <span>Advertise Your Products</span>
+                        <span>Sell-Publish with Us</span>
+                        <span>Become an Blowwe Vendor</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <h5>Let Us Help You</h5>
+                    <div class="text">
+                        <span>Sell on Grogin</span>
+                        <span>Sell Your Services on Grogin</span>
+                        <span>Sell on Grogin Business</span>
+                        <span>Sell Your Apps on Grogin</span>
+                        <span>Become an Affilate</span>
+                        <span>Refund and Returns Policy</span>
+                        <span>Terms and Conditions</span>
+                        <span>Shipping Rates & Policies</span>
+                        <span>Cookie Settings</span>
+                        <span>Help Center</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <h5>Get to Know Us</h5>
+                    <div class="text">
+                        <span>Sell on Grogin</span>
+                        <span>Sell Your Services on Grogin</span>
+                        <span>Sell on Grogin Business</span>
+                        <span>Sell Your Apps on Grogin</span>
+                        <span>Become an Affilate</span>
+                        <span>Customer reviews</span>
+                        <span>Social Responsibility</span>
+                        <span>Store Locations</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <h5>Download our app</h5>
+                    <div class="download google-play">
+                        <a href="">
+                            <img src="../imgs/footer-imgs/play-store.png" alt="">
+                        </a>
+                        <span>Download App Get
+                            -10% Discount</span>
+                    </div>
+                    <div class="download apple-store">
+                        <a href="">
+                            <img src="../imgs/footer-imgs/apple-store.png" alt="">
+                        </a>
+                        <span>Download App Get
+                            -20% Discount</span>
+                    </div>
+
+                    <span>Follow us on social media:</span>
+                    <div class="icons">
+                        <a href=""><img src="../imgs/footer-imgs/fb.png" alt=""></a>
+                        <a href=""><img src="../imgs/footer-imgs/in.png" alt=""></a>
+                        <a href=""><img src="../imgs/footer-imgs/insta.png" alt=""></a>
+                        <a href=""><img src="../imgs/footer-imgs/x.png" alt=""></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr>
+            <div class="down-footer">
+
+                <div class="left">
+                    <p>Copyright 2024 <span>&copy;</span> Jinstore WooCommerce WordPress Theme. All right reserved.
+                        Powered by <span>BlackRise Themes.</span></p>
+                    <div class="icons">
+                        <img src="../imgs/footer-imgs/visa.png" alt="">
+                        <img src="../imgs/footer-imgs/paypal.png" alt="">
+                        <img src="../imgs/footer-imgs/klarna.png" alt="">
+                        <img src="../imgs/footer-imgs/skrill.png" alt="">
+                        <img src="../imgs/footer-imgs/img.png" alt="">
+                    </div>
+                </div>
+                <div class="right">
+                    <a href="">Terms and Conditions</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Order Tracking</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <script>
+
+        let counter = document.querySelector(".counter-love");
+        if(localStorage.getItem("faverArayy")){
+counter.innerHTML = JSON.parse(localStorage.getItem("faverArayy")).length 
+        }
+            else{
+            counter.innerHTML = 0
+        }
+        let numOfShownItems = [];
+        let numOfItem = document.querySelector(".num-showed-items span");
+        let categories = ["Fruits & Vegetables", "Baby & Pregnancy", "Beverages", "Meats & Seafood", "Breads & Bakery", "Candy & snacks", "Grocery & Staples", "Healthcare"];
+        let categoriesNames = ["fruits", "Baby", "Beverages", "Meat" , "Breads", "candy", "Grocery", "Healthcare"]
+        let productCategoriesDiv = document.querySelector(".allProduct-page .container .left  .product-categories");
+
+
+        for (let i = 0; i < categories.length; i++) {
+            let content =
+                `
+            <label  for="fruit">${categories[i]}</label>
+            <input type="checkbox" value="${categoriesNames[i]}"><br>
+            `
+            productCategoriesDiv.innerHTML += content;
+        }
+        //? change color
+        let colorNameSpan = document.querySelector(".allProduct-page .container .left  .filter-by-color span");
+        let color = document.querySelector(".allProduct-page .container .left  .filter-by-color input");
+        color.addEventListener("input", () => {
+            colorNameSpan.innerHTML = color.value;
+        })
+        //change max-price ;
+        let rangeValue = document.querySelector(`.widget-price-filter  input[type = "range"]`);
+        rangeValue.addEventListener("input", () => {
+            document.querySelector(".widget-price-filter .range-price .max input").placeholder = rangeValue.value
+            document.querySelector(".widget-price-filter .filter-div .max ").innerHTML = rangeValue.value
+        })
+        let request = new XMLHttpRequest();
+        request.open("GET", "../products.json", "true");
+        request.send();
+        request.onload = () => {
+            let rightDiv = document.querySelector(".right .items-big-box")
+            if (request.status == 200 && request.readyState == 4) {
+                let data = JSON.parse(request.responseText);
+                for (product of data) {
+                    let output =
+                        `
+                <div class="item" id="${product.id}" date-category="${product.dateCategory}">
+                        <img class="productImg" src=".${product.productImg}" alt="">
+                        <div class="infos">
+                            <div class="classify ${product.classify}" >
+                                <img class="addToFaver" src=".${product.loveIcon}" alt="">
+                            </div>
+                            <span class="discount-percent">
+                                ${product.discountPercent}
+                            </span>
+                        </div>
+                        <p class="productName">${product.productName}</p>
+                    <div style = "    display: flex;justify-content: space-between;align-items: center;">
+                            <span class="discount">
+                            <span>${product.priceAfter}</span>
+                            <span>${product.priceBefore}</span>
+                        </span>
+                        <img class="addToCart" src=".${product.addCartIcon}" alt="">
+                    </div>
+                        <hr class= "${product.classHide}" style="margin-top: 10px;"">
+                        <p  class="run-out ${product.classHide}">This product is about to run out</p>
+                        <hr class= "second ${product.classHide}">
+                        <span class="available ${product.classHide}">available only: <span>${product.available}</span></span>
+                </div>
+            `
+                    rightDiv.innerHTML += output;
+                }
+            }
+
+            let items = document.querySelectorAll(".item");
+            items.forEach((item) => {
+                item.querySelector(".productImg").addEventListener("click", () => {
+                    window.location.href = `../project_pages/oneProductDetails.html?id=${item.getAttribute("id")}`;
+                })
+            })
+            filterCheckBoxs(items);
+            addToFavourite(items);
+        }
+        function filterCheckBoxs(items) {
+            let checkBoxs = document.querySelectorAll(`input[type = "checkbox"]`);
+            checkBoxs.forEach(checkbox => {
+                checkbox.addEventListener("input", () => {
+                    const selected = Array.from(checkBoxs).filter(cb => cb.checked).map(cb => cb.value);
+                    items.forEach(item => {
+                        let category = item.getAttribute("date-category")
+                        if (selected == (category) || selected.length === 0) {
+                            item.classList.remove("hide");
+                        }
+                        else if (selected.length >= 2) {
+                            for (let i = 0; i < selected.length; i++) {
+                                if (selected[i] == (category)) {
+                                    item.classList.remove("hide");
+                                }
+                            }
+                        }
+                        else {
+                            item.classList.add("hide");
+                        }
+                    })
+                })
+            })
+        }
+
+        function addToFavourite(items) {
+            let faverBtns = document.querySelectorAll(".addToFaver");
+            let faverArray = [];
+            if (localStorage.getItem("faverArayy")) {
+                faverArray = (JSON.parse(localStorage.getItem("faverArayy")));
+            }
+            faverBtns.forEach(fb => {
+                fb.addEventListener("click", () => {
+                    fb.style.backgroundColor = "red";
+                    let itemID = (fb.parentElement.parentElement.parentElement.getAttribute("id"));
+                    if (!(faverArray.includes(itemID))) {
+                        counter.innerHTML++;
+                        faverArray.push(itemID);
+                    }
+                    localStorage.setItem("faverArayy", JSON.stringify(faverArray));
+                })
+
+            })
+
+        }
+
+        
+
+
+    </script>
+</body>
+
+</html>

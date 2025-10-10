@@ -1,0 +1,187 @@
+@use "../color_and_responsive/colors" as *;
+footer {
+  padding: 50px 0;
+  background-color: $second-bg-color;
+  .up-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    // justify-content: space-between;
+    .left,
+    .right {
+      flex-basis: 40%;
+    }
+    .left {
+      h5 {
+        font-size: 20px;
+        color: #111827;
+        margin-bottom: 5px;
+      }
+      p {
+        font-size: 13px;
+        color: $text-color-black-gray-2;
+      }
+    }
+    .right {
+      .email-input {
+        margin-bottom: 10px;
+        display: flex;
+        // width: 100%;
+        // max-width: 100%;
+        input {
+          width: 80%;
+          border: 1px $input-border-text-color solid;
+          color: $input-border-text-color;
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
+          outline: 0;
+          width: 100%;
+        }
+        input,
+        button {
+          padding: 10px 10px;
+
+        }
+        .btn {
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+          border-top-left-radius: 0px;
+          border-bottom-left-radius: 0px;
+          width: 30%;
+        }
+      }
+
+      p {
+        font-size: 11px;
+        color: $text-color-black-gray-2;
+        span {
+          color: $purple-color ;
+        }
+      }
+    }
+    @media (max-width: 787px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  .mid-footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 50px;
+    gap: 30px;
+    margin-bottom: 50px;
+    .box {
+      h5 {
+        font-size: 14px;
+        color: $text-color-black;
+        margin-bottom: 10px;
+      }
+      span {
+        font-size: 13px;
+        color: $text-color-black-gray-2;
+        // margin-bottom: 20px;
+      }
+
+      .text {
+        display: flex;
+        // align-items: center;
+        flex-direction: column;
+        span {
+          margin-bottom: 10px;
+        }
+      }
+
+      &:first-child {
+        span:first-child {
+          margin-bottom: 20px;
+        }
+        .phone,
+        .email-us {
+          margin-top: 20px;
+          display: flex;
+          gap: 15px;
+          align-items: center;
+          // img{
+          //     width: 50%;
+          // }
+          .text {
+            h5 {
+              font-size: 20px;
+              color: #111827;
+            }
+            h6 {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        // width: 40%;
+        // text-align: center;
+        .download {
+          display: flex;
+          // justify-content: center;
+          // align-items: center;
+          flex-direction: column;
+          margin-bottom: 10px;
+          img {
+            margin-bottom: 5px;
+          }
+        }
+        .apple-store {
+          margin-bottom: 30px;
+        }
+        .icons {
+          margin-top: 5px;
+        }
+      }
+    }
+    @media (max-width: 787px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      // gap: 20px;
+      .box {
+        width: 100%;
+      }
+    }
+  }
+  .down-footer {
+    margin-top: 50px;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    font-size: 12px;
+    .right {
+      a {
+        text-decoration: underline;
+        color: #111827;
+        // margin-right: 5px;
+        padding: 5px;
+      }
+    }
+    .left {
+      p {
+        margin-bottom: 20px;
+        color: $text-color-black-gray-2;
+        span {
+          color: $purple-color;
+        }
+      }
+      .icons {
+        img {
+          margin-right: 5px;
+        }
+      }
+    }
+    @media (max-width: 787px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}

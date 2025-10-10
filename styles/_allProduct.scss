@@ -1,0 +1,133 @@
+@use "./color_and_responsive/colors" as *;
+
+.allProduct-page {
+  .container {
+    display: flex;
+    // justify-content: space-between;
+    // width: 90%;
+    // align-items: center;
+    // padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap: 2%;
+    .left {
+      display: flex;
+      //   justify-content: center;
+      width: 20%;
+      margin-bottom: 20px;
+      //   padding: 15px;
+      //   background-color: red;
+      //   align-items: center;
+      flex-direction: column;
+      gap: 30px;
+      h5 {
+        margin-bottom: 10px;
+      }
+      .widget-price-filter {
+        .range-price {
+          display: flex;
+          gap: 10px;
+          margin-bottom: 10px;
+          justify-content: space-between;
+          .min {
+            input {
+              width: 100%;
+              border: 1px $input-border-text-color solid;
+              border-radius: 8px;
+              padding: 8px 5px;
+              margin-top: 5px;
+              outline: none;
+            }
+          }
+        }
+        input[type="range"] {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        .filter-div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          span {
+            font-size: 14px;
+          }
+          button {
+            background-color: $input-border-text-color;
+            color: black;
+            padding: 6px 13px;
+            border: 0;
+            border-radius: 8px;
+          }
+        }
+      }
+      .product-categories {
+        label {
+          text-align: left;
+        }
+        input {
+          float: right;
+        }
+      }
+      .filter-by-color {
+        // display: flex;
+        // justify-content: center;
+        // flex-direction: column;
+        div {
+          display: flex;
+          align-items: center;
+          // justify-content: center;
+          gap: 10px;
+        }
+        input[type="color"] {
+          // border-radius: 100%;
+          border: 0;
+          width: 30px;
+          height: 30px;
+          // corner-shape: superellipse(infinity);
+        }
+      }
+    }
+    .right {
+      width: 80%;
+      .product-on-this-week {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+      .items-big-box {
+        display: flex;
+        // justify-content: right;
+        align-items: center;
+        flex-wrap: wrap;
+        align-self: flex-start;
+        // gap: calc(5% / 4);
+        .item {
+          width: calc(80% / 4);
+          align-self: normal;
+          .classify {
+            padding: 0;
+          }
+          //   align-content: baseline;
+          .addToFaver {
+            overflow: hidden;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+      .left {
+        width: 100%;
+      }
+      .right {
+        gap: 0;
+        width: 100%;
+      .items-big-box{
+          .item {
+          width: 50%;
+        }
+      }
+      }
+    }
+  }
+}

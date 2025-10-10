@@ -1,0 +1,828 @@
+[
+  {
+    "id": 0,
+            "dateCategory":"Beverages",
+    "productImg": "./imgs/Home/product/product-1.png",
+    "productName": "100 Percent Apple Juice – 64fl oz Bottle",
+    "priceAfter": "$0.50",
+    "priceBefore": "$1.99",
+    "available": "23",
+    "discountPercent": "5%",
+           "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+    
+  },
+  {
+    "id": 1,
+            "dateCategory":"Breads",
+    "productImg": "./imgs/Home/product/product-2.png",
+    "productName": "Great Value Rising , Supreme",
+    "priceAfter": "$8.99",
+    "priceBefore": "$9.99",
+    "available": "18",
+    "discountPercent": "85%",
+       "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  },
+  {
+    "id": 2,
+            "dateCategory":"Beverages",
+    "productImg": "./imgs/Home/product/product-3.png",
+    "productName": "Simply Orange Pulp Free Juice – 52 fl oz",
+    "priceAfter": "$2.45",
+    "priceBefore": "$4.13",
+    "available": "27",
+    "discountPercent": "90%",
+           "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  },
+  {
+    "id": 3,
+            "dateCategory":"frujbvits",
+    "productImg": "./imgs/Home/product/product-4.png",
+    "productName": "California Pizza Kitchen Margherita…",
+    "priceAfter": "$11.77",
+    "priceBefore": "$14.77",
+    "available": "19",
+    "discountPercent": "44%",
+       "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  },
+  {
+    "id": 4,
+            "dateCategory":"fruhvhits",
+    "productImg": "./imgs/Home/product/product-5.png",
+    "productName": "Cantaloupe Melon FreshOrganic Cut",
+    "priceAfter": "$1.25",
+    "priceBefore": "$2.98",
+    "available": "16",
+    "discountPercent": "75%",
+       "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  },
+  {
+    "id": 5,
+            "dateCategory":"Baby",
+    "productImg": "./imgs/Home/product/product-6.png",
+    "productName": "Angel Soft Toilet Paper, 9Mega Rolls",
+    "priceAfter": "$14.12",
+    "priceBefore": "$17.12",
+    "available": "32",
+    "discountPercent": "60%",
+       "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  },
+  {
+    "id": 6,
+            "dateCategory":"Beverages",
+    "productImg": "./imgs/Home/product/product-7.png",
+    "productName":
+      "A&W Caffeine-Free, Low Sodium Root Beer Soda Pop, 2 Liter Bottles",
+    "priceAfter": "$9.50",
+    "priceBefore": "$11.20",
+    "available": "32",
+    "discountPercent": "5%",
+       "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  },
+  {
+    "id": 7,
+            "dateCategory":"Beverages",
+    "productImg": "./imgs/Home/product/product-8.png",
+    "productName":
+      "A&W Caffeine-Free, Low Sodium Root Beer Soda Pop, 2 Liter Bottles",
+    "priceAfter": "$14.12",
+    "priceBefore": "$17.12",
+    "available": "32",
+    "discountPercent": "7%",
+       "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  },
+  {
+    "id": 8,
+            "dateCategory":"Meat",
+    "productImg": "./imgs/Home/product/product-9.png",
+    "productName": "USDA Choice Angus Beef T-Bone Steak – 0.70-1.50 lbs …",
+    "priceAfter": "$14.12",
+    "priceBefore": "$17.12",
+    "available": "32",
+    "discountPercent": "25%",
+       "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  },
+  {
+    "id": 9,
+            "dateCategory":"fits",
+    "productImg": "./imgs/Home/product/product-10.png",
+    "productName": "Real Plant-Powered Protein Shake – Double Chocolate …",
+    "priceAfter": "$14.89",
+    "priceBefore": "$17.89",
+    "available": "32",
+    "discountPercent": "23%",
+       "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  },
+  {
+    "id": 10,
+            "dateCategory":"Breads",
+    "productImg": "./imgs/Home/product/product-11.png",
+    "productName": "Great Value Rising Crust Pizza, Cheese, 27.4 oz",
+    "priceAfter": "$12.89",
+    "priceBefore": "$14.89",
+    "available": "32",
+    "discountPercent": "65%",
+       "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  },
+
+  {
+    "id": 11,
+            "dateCategory":"frits",
+    "productImg": "./imgs/Home/product/product-12.png",
+    "productName": "Large Garden Spinach & Herb Wrap Tortillas – 15oz_6ct",
+    "priceAfter": "$27.90",
+    "priceBefore": "$32.90",
+    "available": "32",
+    "discountPercent": "32%",
+       "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  },
+    {
+    "id": 12,
+        "dateCategory":"fruits",
+
+    "productImg": "./imgs/Home/product/fruits-1.png",
+    "productName": "Yellow Potatoes Whole Fresh, 5lb Bag",
+    "priceAfter": "$0.50",
+    "priceBefore": "$1.99",
+    "available": "32",
+    "discountPercent": "15%",
+       "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  }
+  ,
+      {
+
+    "id": 13,
+        "dateCategory":"fruits",
+
+    "productImg": "./imgs/Home/product/fruits-2.png",
+    "productName": "Large Bagged Oranges",
+    "priceAfter": "$0.89",
+    "priceBefore": "$1.78",
+    "available": "32",
+    "discountPercent": "50%",
+       "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  },
+      {
+        "dateCategory":"fruits",
+    "id": 14,
+    "productImg": "./imgs/Home/product/fruits-3.png",
+    "productName": "Strawberries – 1lb",
+    "priceAfter": "$1.50",
+    "priceBefore": "$2.15",
+    "available": "32",
+    "discountPercent": "75%",
+       "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  },
+      {
+    "id": 15,
+        "dateCategory":"fruits",
+
+    "productImg": "./imgs/Home/product/fruits-4.png",
+    "productName": "Simple Kitchen FD Sliced Strawberries – 1.08lb",
+    "priceAfter": "$21.90",
+    "priceBefore": "$24.90",
+    "available": "32",
+    "discountPercent": "13%",
+       "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  }
+  ,
+      {
+    "id": 16,
+        "dateCategory":"fruits",
+
+    "productImg": "./imgs/Home/product/fruits-5.png",
+    "productName": "Peach – each",
+    "priceAfter": "$0.75",
+    "priceBefore": "$1.75",
+    "available": "32",
+    "discountPercent": "58%",
+       "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  },
+      {
+    "id": 17,
+        "dateCategory":"fruits",
+
+    "productImg": "./imgs/Home/product/fruits-6.png",
+    "productName": "Marketside Fresh Organic Bananas, Bunch",
+    "priceAfter": "$0.89",
+    "priceBefore": "$1.99",
+    "available": "32",
+    "discountPercent": "56%",
+    "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  },
+      {
+    "id": 18,
+        "dateCategory":"fruits",
+
+    "productImg": "./imgs/Home/product/fruits-7.png",
+    "productName": "Large Garden Spinach & Herb Wrap Tortillas –...",
+    "priceAfter": "$27.90",
+    "priceBefore": "$32.90",
+    "available": "32",
+    "discountPercent": "16%",
+   "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  },
+      {
+    "id": 19,
+        "dateCategory":"fruits",
+
+    "productImg": "./imgs/Home/product/fruits-8.png",
+    "productName": "Halloween Harvest Caramel Apple Soft Caramels –…",
+    "priceAfter": "$19.37",
+    "priceBefore": "$21.37",
+    "available": "32",
+    "discountPercent": "10%",
+   "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  }
+  ,
+      {
+    "id": 20,
+        "dateCategory":"fruits",
+
+    "productImg": "./imgs/Home/product/fruits-9.png",
+    "productName": "Fresh Purple Eggplant",
+    "priceAfter": "$2.99",
+    "priceBefore": "$3.99",
+    "available": "32",
+    "discountPercent": "45%",
+   "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  }
+  ,
+      {
+    "id": 21,
+        "dateCategory":"fruits",
+
+    "productImg": "./imgs/Home/product/fruits-10.png",
+    "productName": "Fresh Pomegranate, Each",
+    "priceAfter": "$1.50",
+    "priceBefore": "$2.99",
+    "available": "32",
+    "discountPercent": "85%",
+     "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  },
+      {
+    "id": 22,
+        "dateCategory":"fruits",
+
+    "productImg": "./imgs/Home/product/fruits-11.png",
+    "productName": "Fresh Lemon, Each",
+    "priceAfter": "$0.50",
+    "priceBefore": "$1.99",
+    "available": "32",
+    "discountPercent": "75%",
+   "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  },
+      {
+    "id": 23,
+        "dateCategory":"fruits",
+
+    "productImg": "./imgs/Home/product/fruits-12.png",
+    "productName": "Fresh Cauliflower, Each",
+    "priceAfter": "$12.79",
+    "priceBefore": "$14.79",
+    "available": "32",
+    "discountPercent": "75%",
+    "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  },
+
+      {
+    "id": 24,
+        "dateCategory":"fruits",
+
+    "productImg": "./imgs/Home/product/fruits-14.png",
+    "productName": "Blackberries – 6oz",
+    "priceAfter": "$2.99",
+    "priceBefore": "$4.99",
+    "available": "32",
+    "discountPercent": "41%",
+   "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  },
+      {
+    "id": 25,
+        "dateCategory":"fruits",
+
+    "productImg": "./imgs/Home/product/fruits-15.png",
+    "productName": "Fresh Granny Smith Apple, Each",
+    "priceAfter": "$9.88",
+    "priceBefore": "$15.99",
+    "available": "32",
+    "discountPercent": "75%",
+   "loveIcon" :"./imgs/Header/love.svg",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg"
+  },
+        {
+    "id": 26,
+        "dateCategory":"fruits",
+
+    "productImg": "./imgs/Home/product/fruits-13.png",
+    "productName": "Fresh Broccoli Crowns, Each",
+    "priceAfter": "$11.54",
+    "priceBefore": "$17.88",
+    "available": "32",
+    "discountPercent": "35%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  },
+    {
+    "id": 27,
+        "dateCategory":"Beverages",
+
+    "productImg": "./imgs/Home/product/Beverages-1.svg",
+    "productName": "Tostitos Pumpkins – 11oz",
+    "priceAfter": "$0.75",
+    "priceBefore": "$1.75",
+    "available": "32",
+    "discountPercent": "35%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  }
+  ,
+    {
+    "id": 28,
+        "dateCategory":"Beverages",
+
+    "productImg": "./imgs/Home/product/Beverages-2.svg",
+    "productName": "SToK Black Unsweetened Cold Brew Coffee – 48 fl oz",
+    "priceAfter": "$9.19",
+    "priceBefore": "$11.19",
+    "available": "32",
+    "discountPercent": "35%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  },
+  
+    {
+    "id": 29,
+        "dateCategory":"Beverages",
+
+    "productImg": "./imgs/Home/product/Beverages-3.svg",
+    "productName": "Starbucks Keurig K-Cup Holiday Blend – 22ct_8.9oz…",
+    "priceAfter": "$5.79",
+    "priceBefore": "$8.79",
+    "available": "32",
+    "discountPercent": "35%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  }
+  ,
+    {
+    "id": 30,
+        "dateCategory":"Beverages",
+
+    "productImg": "./imgs/Home/product/Beverages-4.svg",
+    "productName": "Starbucks by Nespresso Vertuo Line Pods Medium…",
+    "priceAfter": "$11.54",
+    "priceBefore": "$17.88",
+    "available": "32",
+    "discountPercent": "35%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  }
+  ,
+    {
+    "id": 31,
+        "dateCategory":"Beverages",
+
+    "productImg": "./imgs/Home/product/Beverages-5.svg",
+    "productName": "Smartwater Bottles – 6pk_16.9 fl oz",
+    "priceAfter": "$11.54",
+    "priceBefore": "$17.88",
+    "available": "32",
+    "discountPercent": "35%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  },
+    {
+    "id": 32,
+        "dateCategory":"Beverages",
+
+    "productImg": "./imgs/Home/product/Beverages-6.svg",
+    "productName": "Similac® Advance®_ Powder Baby Formula with Iron,…",
+    "priceAfter": "$25.83",
+    "priceBefore": "$33.84",
+    "available": "32",
+    "discountPercent": "24%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  },
+    {
+    "id": 33,
+        "dateCategory":"Beverages",
+
+    "productImg": "./imgs/Home/product/Beverages-7.svg",
+    "productName": "Schweppes Diet Ginger Ale 12 oz Cans – Pack of 24h",
+    "priceAfter": "$1.99",
+    "priceBefore": "$2.99",
+    "available": "32",
+    "discountPercent": "35%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  },
+    {
+    "id": 34,
+        "dateCategory":"Beverages",
+
+    "productImg": "./imgs/Home/product/Beverages-8.svg",
+    "productName": "S.Pellegrino Sparkling Natural Mineral Water, 16.9…h",
+    "priceAfter": "$1.99",
+    "priceBefore": "$2.99",
+    "available": "32",
+    "discountPercent": "30%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  },
+    {
+    "id": 35,
+        "dateCategory":"Beverages",
+
+    "productImg": "./imgs/Home/product/Beverages-9.svg",
+    "productName": "Red Bay Coffee Coltrane Medium Roast Coffee – 12oz",
+    "priceAfter": "$11.99",
+    "priceBefore": "$14.99",
+    "available": "32",
+    "discountPercent": "35%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  },
+    {
+    "id": 36,
+        "dateCategory":"Beverages",
+
+    "productImg": "./imgs/Home/product/Beverages-10.svg",
+    "productName": "Real Plant-Powered Protein Shake – Double Chocolate …",
+    "priceAfter": "$11.54",
+    "priceBefore": "$17.88",
+    "available": "32",
+    "discountPercent": "35%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  },
+    {
+    "id": 37,
+        "dateCategory":"Beverages",
+
+    "productImg": "./imgs/Home/product/Beverages-11.svg",
+    "productName": "Starbucks Black Unsweetened Cold Brew…",
+    "priceAfter": "$5.22",
+    "priceBefore": "$6.22",
+    "available": "32",
+    "discountPercent": "35%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  },
+    {
+    "id": 38,
+        "dateCategory":"Beverages",
+
+    "productImg": "./imgs/Home/product/Beverages-12.svg",
+    "productName": "Pop & Bottle Caramel Cold Brew Oat Milk Latte with…",
+    "priceAfter": "$1.98",
+    "priceBefore": "$2.98",
+    "available": "32",
+    "discountPercent": "35%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  },
+    {
+    "id": 39,
+        "dateCategory":"Beverages",
+
+    "productImg": "./imgs/Home/product/Beverages-13.svg",
+    "productName": "Pepsi Cola Soda Pop, 2 Liter Bottle",
+    "priceAfter": "$1.99",
+    "priceBefore": "$2.99",
+    "available": "32",
+    "discountPercent": "35%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  },
+    {
+    "id": 40,
+        "dateCategory":"Beverages",
+
+    "productImg": "./imgs/Home/product/Beverages-14.svg",
+    "productName": "Naturally Flavored Pumpkin Spice Light Roast Coffee –…",
+    "priceAfter": "$11.54",
+    "priceBefore": "$14.71",
+    "available": "32",
+    "discountPercent": "35%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  },
+    {
+    "id": 41,
+        "dateCategory":"Beverages",
+
+    "productImg": "./imgs/Home/product/Beverages-15.svg",
+    "productName": "Naked Green Machine Boosted Juice Smoothie –…",
+    "priceAfter": "$4.12",
+    "priceBefore": "$8.12",
+    "available": "32",
+    "discountPercent": "35%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  },
+    {
+    "id": 42,
+        "dateCategory":"Beverages",
+
+    "productImg": "./imgs/Home/product/Beverages-16.svg",
+    "productName": "Light Blood Orange Ginger – 4pk_200ml Bottles",
+    "priceAfter": "$$16.89",
+    "priceBefore": "$17.89",
+    "available": "32",
+    "discountPercent": "35%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  },
+     {
+    "id": 43,
+        "dateCategory":"Healthcare",
+
+    "productImg": "./imgs/Home/product/healthCare-1.png",
+    "productName": "Garnier Color Naturals Hair Dye - Light Brown - Number 5.0",
+    "priceAfter": "125.95",
+    "priceBefore": "145.95",
+    "available": "32",
+    "discountPercent": "14%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  },
+  {
+    "id": 44,
+        "dateCategory":"Healthcare",
+
+    "productImg": "./imgs/Home/product/healthCare-2.png",
+    "productName": "Clear Hair Fall Defense Anti-Dandruff Shampoo - 600ml",
+    "priceAfter": "186.95",
+    "priceBefore": "205.95",
+    "available": "32",
+    "discountPercent": "14%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  },
+    {
+    "id": 45,
+        "dateCategory":"Healthcare",
+
+    "productImg": "./imgs/Home/product/healthCare-3.png",
+    "productName": "One Lanolin Normal Skin Hair Removal Cream - 140g",
+    "priceAfter": "186.95",
+    "priceBefore": "205.95",
+    "available": "32",
+    "discountPercent": "14%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  }
+  ,
+    {
+    "id": 46,
+        "dateCategory":"Healthcare",
+
+    "productImg": "./imgs/Home/product/healthCare-4.png",
+    "productName": "Sensodyne Multi Care Plus Whitening Toothpaste - 100ml",
+    "priceAfter": "186.95",
+    "priceBefore": "205.95",
+    "available": "32",
+    "discountPercent": "14%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  },
+      {
+    "id": 47,
+        "dateCategory":"Baby",
+
+    "productImg": "./imgs/Home/product/baby-1.png",
+    "productName": "Baby Joy Diapers - 3.5-7Kg - Size 2 Small - 60 Diapers",
+    "priceAfter": "186.95",
+    "priceBefore": "205.95",
+    "available": "32",
+    "discountPercent": "14%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  }
+  ,
+      {
+    "id": 48,
+        "dateCategory":"Baby",
+
+    "productImg": "./imgs/Home/product/baby-2.png",
+    "productName": "Nestle Cerelac Milk Wheat Baby Food - 125g",
+    "priceAfter": "48.75",
+    "priceBefore": "50.95",
+    "available": "32",
+    "discountPercent": "14%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  }
+   ,
+      {
+    "id": 49,
+        "dateCategory":"Meat",
+
+    "productImg": "./imgs/Home/product/meat-1.png",
+    "productName": "Faraza Fresh Chicken Shish Tawook - 900g",
+    "priceAfter": "120",
+    "priceBefore": "130.95",
+    "available": "32",
+    "discountPercent": "14%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  }
+    ,
+      {
+    "id": 50,
+        "dateCategory":"Meat",
+
+    "productImg": "./imgs/Home/product/meat-2.png",
+    "productName": "Temry Fresh Chicken Thighs - 1K",
+    "priceAfter": "140",
+    "priceBefore": "150",
+    "available": "32",
+    "discountPercent": "14%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  } ,
+      {
+    "id": 51,
+        "dateCategory":"Meat",
+
+    "productImg": "./imgs/Home/product/meat-3.png",
+    "productName": "Beef Kofta - By Weight 1 Kg",
+    "priceAfter": "140",
+    "priceBefore": "150",
+    "available": "32",
+    "discountPercent": "14%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  }
+  ,
+      {
+    "id": 52,
+        "dateCategory":"Grocery",
+
+    "productImg": "./imgs/Home/product/grocery-1.png",
+    "productName": "Luna Sweetened Condensed Milk -395ml",
+    "priceAfter": "94",
+    "priceBefore": "120",
+    "available": "32",
+    "discountPercent": "14%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  }
+    ,
+      {
+    "id": 53,
+        "dateCategory":"Grocery",
+
+    "productImg": "./imgs/Home/product/grocery-2.png",
+    "productName": "Luna Sweetened Condensed Milk -395ml",
+    "priceAfter": "94",
+    "priceBefore": "120",
+    "available": "32",
+    "discountPercent": "14%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  }
+   ,
+      {
+    "id": 54,
+        "dateCategory":"candy",
+
+    "productImg": "./imgs/Home/product/candy-1.png",
+    "productName": "Raw Jalapeno Potato Chips - 90-100g",
+    "priceAfter": "94",
+    "priceBefore": "120",
+    "available": "32",
+    "discountPercent": "14%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  }
+   ,
+      {
+    "id": 55,
+        "dateCategory":"candy",
+
+    "productImg": "./imgs/Home/product/candy-2.png",
+    "productName": "Tiger Excellence Chili Ranch Potato Chips",
+    "priceAfter": "17",
+    "priceBefore": "20",
+    "available": "32",
+    "discountPercent": "14%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  }
+  ,
+      {
+    "id": 56,
+        "dateCategory":"candy",
+
+    "productImg": "./imgs/Home/product/candy-3.png",
+    "productName": "Chipsy Tomato Potato Chips -124-134g",
+    "priceAfter": "19",
+    "priceBefore": "20",
+    "available": "32",
+    "discountPercent": "14%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  }
+    ,
+      {
+    "id": 57,
+        "dateCategory":"candy",
+
+    "productImg": "./imgs/Home/product/candy-4.png",
+    "productName": "Spuds Hot Sriracha Potato Chips -77-67g",
+    "priceAfter": "19",
+    "priceBefore": "20",
+    "available": "32",
+    "discountPercent": "14%",
+    "classHide": "hide",
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "loveIcon" :"./imgs/Header/love.svg"
+  }
+  
+  
+  
+  ]

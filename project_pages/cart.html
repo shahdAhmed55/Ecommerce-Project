@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../main_css/main.css">
+    <link rel="stylesheet" href="../styles/color_and_responsive/global.css">
+</head>
+<body>
+    <h1>f</h1>
+
+    <script>
+         let array = JSON.parse(localStorage.getItem("addProductToCart")).id;
+         let items = [];
+         items.push(array);
+              let request = new XMLHttpRequest();
+        request.open("get", "../products.json");
+        request.onload = () => {
+            if (request.status == 200 && request.readyState == 4 && array) {
+                let data = JSON.parse(request.responseText);
+                console.log(data);
+                console.log(array)
+               
+              
+                    for (product of data) {
+                        if (product.id == array) {
+                            let content =
+                                `
+                         <div class="item" id="${product.id}">
+                        <img class="productImg" src=".${product.productImg}" alt="">
+                        <div class="itemInfo">
+                            <div class="infos">
+                            <div class="classify ${product.classify}" >
+                                <img class="removeFromFaver" src=".${product.loveIcon}" alt="">
+                                
+                              <span class="${product.classify}">${product.classify}</span>
+                            </div>
+                            <span class="discount-percent">
+                               ${product.discountPercent}
+                            </span>
+                        </div>
+                        <p class="productName">${product.productName}</p>
+
+                        <span class="discount">
+                            <span>${product.priceAfter}</span>
+                            <span>${product.priceBefore}</span>
+                        </span>
+                        </div>                        
+                    </div>
+                    `
+                            document.querySelector("body").innerHTML += content;
+                        }
+                    }
+                }
+            
+            let items = document.querySelectorAll(".item")
+
+        }
+        request.send();
+    </script>
+</body>
+</html>

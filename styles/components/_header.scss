@@ -1,0 +1,131 @@
+@use "../color_and_responsive/colors" as *;
+header {
+  font-size: 13px;
+  background-color: $second-bg-color;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    gap: 10px;
+
+    ul {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      li {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .upper {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      color: $gray;
+      font-weight: bold;
+
+      a {
+        color: $gray;
+      }
+
+      @media (max-width: 992px) {
+        gap: 20px;
+        flex-direction: column;
+        ul {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+    }
+    .middle {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: center;
+      font-weight: 600;
+      .left {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        .store {
+          gap: 20px;
+
+          display: flex;
+          align-items: center;
+          vertical-align: middle;
+        }
+        .location {
+          gap: 20px;
+
+          display: flex;
+          align-items: center;
+          .DeliverTo {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+      input {
+        width: 50%;
+        height: 40px;
+        background-color: $input-border-text-color;
+        color: $input-border-text-color-2;
+        border: 0;
+        padding-left: 20px;
+        border-radius: 8px;
+      }
+
+      ul {
+        li {
+          position: relative;
+        }
+
+        span {
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          background-color: $purple-color;
+          padding: 1px 5px;
+          border-radius: 100%;
+          color: white;
+          font-size: 11px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        gap: 20px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        ul {
+          justify-content: center;
+        }
+        input {
+          width: 90%;
+        }
+      }
+    }
+    .bottom {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      font-weight: bold;
+      a {
+        color: $text-color-black;
+      }
+
+      @media (max-width: 992px) {
+        gap: 20px;
+        flex-direction: column;
+        ul {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
