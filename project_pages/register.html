@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,59 +8,71 @@
     <link rel="stylesheet" href="../main_css/main.css">
     <link rel="stylesheet" href="../styles/color_and_responsive/global.css">
     <style>
-        .register-page{
+        .register-page {
             padding: 50px 0;
         }
-        .register-page .container{
+
+        .register-page .container {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             gap: 20px;
         }
-        .register-page .container .title{
+
+        .register-page .container .title {
             display: flex;
             gap: 20px;
         }
-        .p{
+
+        .p {
             width: 46%;
             text-align: center;
 
         }
+
         @media (max-width:992px) {
-            .p{
-            width: 100%;
+            .p {
+                width: 100%;
             }
         }
-        .register-page .container .title h3:last-child{
+
+        .register-page .container .title h3:last-child {
             color: gray;
         }
-        .register-page .container form{
+
+        .register-page .container form {
             width: 50%;
         }
-         @media (max-width:992px) {
-            .register-page .container form{
-            width: 100%;
+
+        @media (max-width:992px) {
+            .register-page .container form {
+                width: 100%;
+            }
+
+            p {
+                text-align: center;
+
+            }
         }
-        p{
-            text-align: center;
-            
-        }
-        }
-        .register-page .container input:not(input[type=radio]),button{
+
+        .register-page .container input:not(input[type=radio]),
+        button {
             width: 100%;
             padding: 10px 5px;
             border-radius: 8px;
             border: 1px solid gray;
             margin-top: 10px;
         }
-        h3{
+
+        h3 {
             cursor: pointer;
         }
     </style>
 </head>
+
 <body>
-        <header>
+    <header>
         <div class="container">
             <div class="upper">
                 <ul>
@@ -121,7 +134,7 @@
 
                     </li>
 
-              
+
                     <li>
                         <a class="love" href="./favouritePage.html">
                             <img src="../imgs/Header/love.svg" alt="">
@@ -178,13 +191,13 @@
                 <h3 class="logIn">Login</h3>
             </div>
             <p class="p">There are many advantages to creating an account: the payment process is
-faster, shipment tracking is possible and much more.</p>
+                faster, shipment tracking is possible and much more.</p>
             <form action="get">
                 <label for="username">
                     Username*
                 </label><br>
                 <input type="text" name="username" required><br><br>
-                 <label for="email">
+                <label for="email">
                     Email address*
                 </label><br>
                 <input type="email" name="email" required><br><br>
@@ -194,196 +207,67 @@ faster, shipment tracking is possible and much more.</p>
                 <input type="password" name="password" required><br><br>
                 <div style="flex-direction: column; display:flex;">
                     <label>
-                        <input type="radio">  I am a customer
+                        <input type="radio"> I am a customer
                     </label>
-                     <label>
-                        <input type="radio">  I am a vendor
+                    <label>
+                        <input type="radio"> I am a vendor
                     </label>
                 </div>
 
                 <p style="margin-top: 20px;">
                     Your personal data will be used to support your experience throughout this
-website, to manage access to your account, and for other purposes described in
-our <span style="color:#634C9F ;">privacy policy</span>.
+                    website, to manage access to your account, and for other purposes described in
+                    our <span style="color:#634C9F ;">privacy policy</span>.
                 </p>
                 <button type="submit" class="btn" style="margin-top: 20px;">Register</button>
             </form>
         </div>
     </div>
 
-
-
-
-                <footer>
-        <div class="container">
-            <div class="up-footer">
-                <div class="left">
-                    <h5>Join our newsletter for £10 offs</h5>
-                    <p>Register now to get latest updates on promotions &
-                        coupons.Don’t worry, we not spam!</p>
-                </div>
-                <div class="right">
-                    <div class="email-input">
-                        <input type="text" placeholder="Enter your email address">
-                        <button class="btn" type="submit">SEND</button>
-                    </div>
-                    <p>By subscribing you agree <span>to our Terms & Conditions and Privacy & Cookies Policy</span></p>
-                </div>
-            </div>
-            <hr>
-            <div class="mid-footer">
-                <div class="box">
-                    <h5>Do You Need Help ?</h5>
-                    <span>Autoseligen syr. Nek diarask fröbomba. Nör
-                        antipol kynoda nynat. Pressa fåmoska</span>
-
-                    <div class="phone">
-                        <img src="../imgs/footer-imgs/tel.png" alt="">
-                        <span class="text">
-                            <p>Monday-Friday: 08am-9pm</p>
-                            <h5>0 800 300-353</h5>
-                        </span>
-                    </div>
-
-                    <div class="email-us">
-                        <img src="../imgs/footer-imgs/email.png" alt="">
-                        <span class="text">
-                            <p>Monday-Friday: 08am-9pm</p>
-                            <h6>info@example.com</h6>
-                        </span>
-                    </div>
-                </div>
-                <div class="box">
-                    <h5>Make Money with Us</h5>
-                    <div class="text">
-                        <span>Sell on Grogin</span>
-                        <span>Sell Your Services on Grogin</span>
-                        <span>Sell on Grogin Business</span>
-                        <span>Sell Your Apps on Grogin</span>
-                        <span>Become an Affilate</span>
-                        <span>Advertise Your Products</span>
-                        <span>Sell-Publish with Us</span>
-                        <span>Become an Blowwe Vendor</span>
-                    </div>
-                </div>
-                <div class="box">
-                    <h5>Let Us Help You</h5>
-                    <div class="text">
-                        <span>Sell on Grogin</span>
-                        <span>Sell Your Services on Grogin</span>
-                        <span>Sell on Grogin Business</span>
-                        <span>Sell Your Apps on Grogin</span>
-                        <span>Become an Affilate</span>
-                        <span>Refund and Returns Policy</span>
-                        <span>Terms and Conditions</span>
-                        <span>Shipping Rates & Policies</span>
-                        <span>Cookie Settings</span>
-                        <span>Help Center</span>
-                    </div>
-                </div>
-                <div class="box">
-                    <h5>Get to Know Us</h5>
-                    <div class="text">
-                        <span>Sell on Grogin</span>
-                        <span>Sell Your Services on Grogin</span>
-                        <span>Sell on Grogin Business</span>
-                        <span>Sell Your Apps on Grogin</span>
-                        <span>Become an Affilate</span>
-                        <span>Customer reviews</span>
-                        <span>Social Responsibility</span>
-                        <span>Store Locations</span>
-                    </div>
-                </div>
-                <div class="box">
-                    <h5>Download our app</h5>
-                    <div class="download google-play">
-                        <a href="">
-                            <img src="../imgs/footer-imgs/play-store.png" alt="">
-                        </a>
-                        <span>Download App Get
-                            -10% Discount</span>
-                    </div>
-                    <div class="download apple-store">
-                        <a href="">
-                            <img src="../imgs/footer-imgs/apple-store.png" alt="">
-                        </a>
-                        <span>Download App Get
-                            -20% Discount</span>
-                    </div>
-
-                    <span>Follow us on social media:</span>
-                    <div class="icons">
-                        <a href=""><img src="../imgs/footer-imgs/fb.png" alt=""></a>
-                        <a href=""><img src="../imgs/footer-imgs/in.png" alt=""></a>
-                        <a href=""><img src="../imgs/footer-imgs/insta.png" alt=""></a>
-                        <a href=""><img src="../imgs/footer-imgs/x.png" alt=""></a>
-                    </div>
-
-                </div>
-            </div>
-
-            <hr>
-            <div class="down-footer">
-
-                <div class="left">
-                    <p>Copyright 2024 <span>&copy;</span> Jinstore WooCommerce WordPress Theme. All right reserved.
-                        Powered by <span>BlackRise Themes.</span></p>
-                    <div class="icons">
-                        <img src="../imgs/footer-imgs/visa.png" alt="">
-                        <img src="../imgs/footer-imgs/paypal.png" alt="">
-                        <img src="../imgs/footer-imgs/klarna.png" alt="">
-                        <img src="../imgs/footer-imgs/skrill.png" alt="">
-                        <img src="../imgs/footer-imgs/img.png" alt="">
-                    </div>
-                </div>
-                <div class="right">
-                    <a href="">Terms and Conditions</a>
-                    <a href="">Privacy Policy</a>
-                    <a href="">Order Tracking</a>
-                </div>
-            </div>
-
-        </div>
-    </footer>
-
-
     <script>
 
-         let counter = document.querySelector(".counter-love");
-        if(localStorage.getItem("faverArayy")){
-counter.innerHTML = JSON.parse(localStorage.getItem("faverArayy")).length 
+        let counter = document.querySelector(".counter-love");
+        if (localStorage.getItem("faverArayy")) {
+            counter.innerHTML = JSON.parse(localStorage.getItem("faverArayy")).length
         }
-        else{
+        else {
             counter.innerHTML = 0
         }
 
         let loginBtn = document.querySelector(".logIn");
-        loginBtn.addEventListener("click",()=>{
+        loginBtn.addEventListener("click", () => {
             window.location.href = "./login.html"
         })
 
 
         let registerForm = document.querySelector("form");
-        registerForm.addEventListener("submit", (e)=>{
+        registerForm.addEventListener("submit", (e) => {
             e.preventDefault();
 
-        let username = document.querySelector("input[name=username]").value;
-        let email = document.querySelector("input[name=email]").value;
-        let password = document.querySelector("input[name=password]").value;
-        
-        let user = {
-            username : username,
-            email : email,
-            password:password,
-        }
-        
-        localStorage.setItem("user" , JSON.stringify(user));
-        document.querySelector("button").addEventListener("click",()=>{
-            window.location.href = "./login.html"
-        })
+            let username = document.querySelector("input[name=username]").value;
+            let email = document.querySelector("input[name=email]").value;
+            let password = document.querySelector("input[name=password]").value;
+
+            let user = {
+                username: username,
+                email: email,
+                password: password,
+            }
+
+            localStorage.setItem("user", JSON.stringify(user));
+            document.querySelector("button").addEventListener("click", () => {
+                window.location.href = "./login.html"
+            })
         })
 
+
+        fetch("./footer.html").then(response => response.text()).then(data => {
+            let footer = document.createElement("footer");
+            footer.innerHTML = data;
+            document.body.append(footer);
+        })
 
     </script>
 </body>
+
 </html>

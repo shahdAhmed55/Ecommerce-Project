@@ -2,19 +2,21 @@
 // request.open("GET", "www.themealdb.com/api/json/v1/1/random.php", true);
 // request.send();
 // console.log(request);
-        let counter = document.querySelector(".counter-love");
-        if(localStorage.getItem("faverArayy")){
-counter.innerHTML = JSON.parse(localStorage.getItem("faverArayy")).length 
-        }
-        counter.innerHTML = 0
 
+let counter = document.querySelector(".counter-love");
+if (localStorage.getItem("faverArayy")) {
+  counter.innerHTML = JSON.parse(localStorage.getItem("faverArayy")).length;
+}
+else{
+  counter.innerHTML = 0;
+}
 
 let disscountIntros = [
   {
     id: 0,
     img: "./imgs/Home/bg/bg01.png",
     title: "Get the best quality products at the lowest prices",
-    priceAfter: "$21.67",
+    priceAfter: "$21.67", 
     priceBefore: "$59.99",
   },
   {
@@ -315,7 +317,7 @@ let productsOnThisweekDivs = document.querySelectorAll(".on-this-week");
 
 let i = 0;
 function addproductsOnThisweek() {
-  return (content = `
+  return `
     <div class="product-on-this-week">
       <img src="${productsOnThisweek[i].img}" alt="">
       
@@ -326,7 +328,7 @@ function addproductsOnThisweek() {
             <button  class="${productsOnThisweek[i].classHide} view-all-btn">Shop Now</button>
         </div>
     </div>
-  `);
+  `;
 }
 
 for (i = 0; i < productsOnThisweek.length; i++) {
@@ -344,11 +346,20 @@ for (i = 5; i < productsOnThisweek.length; i++) {
   newArraivalsLeftSection.innerHTML += addproductsOnThisweek();
 }
 
+let items = document.querySelectorAll(".item");
+console.log(items);
+items.forEach((item) => {
+  item.querySelector(".productImg").addEventListener("click", () => {
+    window.location.href = `./project_pages/oneProductDetails.html?id=${item.getAttribute(
+      "id"
+    )}`;
+  });
+});
 
-  let items = document.querySelectorAll(".item");
-  console.log(items)
-            items.forEach((item) => {
-                item.querySelector(".productImg").addEventListener("click", () => {
-                    window.location.href = `./project_pages/oneProductDetails.html?id=${item.getAttribute("id")}`;
-                })
-            })
+
+
+fetch("./project_pages/footer.html").then(response=> response.text()).then(data=>{
+  let footer = document.createElement("footer");
+  footer.innerHTML = data;
+  document.body.append(footer);
+})

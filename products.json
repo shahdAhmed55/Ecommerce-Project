@@ -10,7 +10,10 @@
     "discountPercent": "5%",
            "loveIcon" :"./imgs/Header/love.svg",
     "classHide": "hide",
-    "addCartIcon":"./imgs/Header/cart.svg"
+    "addCartIcon":"./imgs/Header/cart.svg",
+    "relatedProducts" : {
+        
+    }
     
   },
   {
