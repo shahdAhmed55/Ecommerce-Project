@@ -5,6 +5,15 @@ if (localStorage.getItem("faverArayy")) {
   counter.innerHTML = 0;
 }
 
+let itemsInCart = [];
+if (localStorage.getItem("allInCart")) {
+  let y = JSON.parse(localStorage.getItem("allInCart"));
+  console.log(y);
+  for (let i = 0; i < y.length; i++) {
+    itemsInCart.push(y[i]);
+  }
+}
+
 let request = new XMLHttpRequest();
 request.open("get", "../products.json");
 
@@ -99,76 +108,73 @@ request.onload = () => {
       document.querySelector(".container .product-infos").innerHTML = con;
     }
   }
-  popUpMessage();
-  numOfProductInCart();
-  addToFavourite();
-  addOneItemToFavourite();
-};
-
-request.send();
-let items = [];
-
-function numOfProductInCart() {
-  let minusBtn = document.querySelector(".minus-product");
-  let plussBtn = document.querySelector(".plus-product");
   let numOfProduct = document.querySelector(".product-num");
-  minusBtn.addEventListener("click", () => {
-    numOfProduct.innerHTML--;
-    if (numOfProduct.innerHTML < 0) {
-      numOfProduct.innerHTML = 0;
-    }
-    productsPrice();
-  });
-  plussBtn.addEventListener("click", () => {
-    numOfProduct.innerHTML++;
-    productsPrice();
-  });
-}
-
-function productsPrice() {
-  let numOfProduct = Number(document.querySelector(".product-num").innerHTML);
   let productPrice = document.querySelector(".product-price").innerHTML;
-  productPrice = productPrice.slice(1);
-  console.log(numOfProduct);
-  console.log(productPrice);
-  let res = numOfProduct * productPrice;
-  saveInLs(res, numOfProduct);
-  popUpMessage(res, numOfProduct);
-  return res;
-}
 
-function popUpMessage(res, numOfProduct = 1) {
   let addCartBtn = document.querySelector(".add-cart-btn");
   let popUpContainer = document.querySelector(".product-page .popUp");
-  console.log(popUpContainer);
+
+  // popUpMessage(popUpContainer);
+  numOfProductInCart(numOfProduct, productPrice);
+  addToFavourite();
+  addOneItemToFavourite();
 
   addCartBtn.addEventListener("click", () => {
     let popup = `
-                    <P>You add <span style="color:red">${numOfProduct}</span> product to cart</P>
+                    <P>You add <span style="color:red">${Number(
+                      numOfProduct.innerText
+                    )}</span> product to cart</P>
                 `;
     popUpContainer.classList.remove("hide");
     popUpContainer.innerHTML = popup;
     setTimeout(() => {
       popUpContainer.classList.add("hide");
     }, 3000);
+// 
+    saveInLs(productPrice, Number(numOfProduct.innerText));
+  });
+};
 
-     let itemsInCart = [];
-   itemsInCart += JSON.parse(localStorage.getItem("addProductToCart"));
+request.send();
+let items = [];
 
-    localStorage.setItem("allInCart", localStorage.getItem("addProductToCart"));
-    console.log(JSON.parse(itemsInCart));
+function numOfProductInCart(numOfProduct, productPrice) {
+  let minusBtn = document.querySelector(".minus-product");
+  let plussBtn = document.querySelector(".plus-product");
+  // let numOfProduct = document.querySelector(".product-num");
+  minusBtn.addEventListener("click", () => {
+    numOfProduct.innerHTML--;
+    if (numOfProduct.innerHTML < 0) {
+      numOfProduct.innerHTML = 0;
+    }
+    productsPricefunc(numOfProduct, productPrice);
+  });
+  plussBtn.addEventListener("click", () => {
+    numOfProduct.innerHTML++;
+    productsPricefunc(numOfProduct, productPrice);
   });
 }
 
-function saveInLs(res, numOfProduct) {
+function productsPricefunc(numOfProduct, productPrice) {
+  numOfProduct = Number(numOfProduct.innerText);
+  productPrice = productPrice.slice(1);
+  let res = numOfProduct * productPrice;
+  return res;
+}
+
+function saveInLs(productPrice, numOfProduct) {
+  productPrice = productPrice.slice(1);
+  console.log(productPrice ,numOfProduct)
   let param = new URLSearchParams(window.location.search);
   let itemid = parseInt(param.get("id"));
+
   let item = {
     id: itemid,
-    totalPrice: res,
+    totalPrice: (productPrice * numOfProduct),
     numOfProduct: numOfProduct,
   };
-  localStorage.setItem("addProductToCart", JSON.stringify(item));
+  itemsInCart.push(item);
+  localStorage.setItem("allInCart", JSON.stringify(itemsInCart));
 }
 
 function createRelatedItems(product) {

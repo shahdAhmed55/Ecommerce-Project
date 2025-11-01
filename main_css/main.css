@@ -870,16 +870,16 @@ footer .down-footer .left .icons img {
 }
 
 .popUp {
-  background-color: rgb(196, 196, 196);
+  background-color: rgb(230, 230, 230);
   width: 250px;
   text-align: center;
-  padding: 15px 5px;
-  border-radius: 20px;
+  padding: 20px 5px;
+  border-radius: 10px;
   position: fixed;
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  border: rgb(0, 236, 0) 3px solid;
+  border: rgb(0, 236, 0) 4px solid;
 }
 
 body {

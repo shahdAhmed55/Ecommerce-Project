@@ -1,129 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../main_css/main.css">
-    <link rel="stylesheet" href="../styles/color_and_responsive/global.css">
-    <style>
-        .container{
-            display: flex;
-        }
-        .item {
-        border: 1px solid black;
-        padding: 10px;
-        align-self:flex-end;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-        .productImg {
-          object-fit: cover;
-          width: 50%;
-          cursor: pointer;
-        }
-        .itemInfo{
-            width: 50%;
-        }
-        .infos {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin-bottom: 10px;
-
-
-
-          .discount-percent {
-            background-color: red;
-            border-radius: 20px;
-            color: white;
-            padding: 5px 8px;
-            font-size: 12px;
-            font-weight: bold;
-          }
-        }
-
-        .productName {
-          margin-bottom: 10px;
-          margin-top: 15px;
-          font-weight: bold;
-          font-size: 15px;
-            min-height: 45px;
-            overflow: hidden;
-            width: 80%;
-   
-          
-        }
-
-        .second {
-          margin-top: 8px;
-          margin-bottom: 8px;
-
-          border: 3px solid red;
-
-          width: 100%;
-        }
-        .run-out {
-          margin-top: 10px;
-
-          font-size: 11px;
-          color: gray;
-        }
-        .available {
-          margin-top: 5px;
-          color: gray;
-          font-size: 12px;
-          span {
-            font-weight: bold;
-            color: black;
-            font-size: 15px;
-          }
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../main_css/main.css">
+  <link rel="stylesheet" href="../styles/color_and_responsive/global.css">
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
     }
-            @media (max-width:992px) {
-             .item{
-                 width: 100%;
-                 
-             }
-            }
-            
-    </style>
+
+    .item {
+      border: 1px solid black;
+      padding: 10px;
+      align-self: flex-end;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+
+      .productImg {
+        object-fit: cover;
+        width: 50%;
+        cursor: pointer;
+      }
+
+      .itemInfo {
+        width: 50%;
+      }
+
+      .infos {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+
+
+        .discount-percent {
+          background-color: red;
+          border-radius: 20px;
+          color: white;
+          padding: 5px 8px;
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }
+
+      .productName {
+        margin-bottom: 10px;
+        margin-top: 15px;
+        font-weight: bold;
+        font-size: 15px;
+        min-height: 45px;
+        overflow: hidden;
+        width: 80%;
+
+
+      }
+
+      .second {
+        margin-top: 8px;
+        margin-bottom: 8px;
+
+        border: 3px solid red;
+
+        width: 100%;
+      }
+
+      .run-out {
+        margin-top: 10px;
+
+        font-size: 11px;
+        color: gray;
+      }
+
+      .available {
+        margin-top: 5px;
+        color: gray;
+        font-size: 12px;
+
+        span {
+          font-weight: bold;
+          color: black;
+          font-size: 15px;
+        }
+      }
+    }
+
+    @media (max-width:992px) {
+      .item {
+        width: 100%;
+
+      }
+    }
+  </style>
 </head>
+
 <body>
-         <div class="cart-page">
-            <div class="container">
+  <div class="cart-page">
+    <div class="container">
 
-               
-            </div>
-         </div>
 
-    <script>
-         let array = JSON.parse(localStorage.getItem("addProductToCart")).id;
-         let items = [];
-         items.push(array);
-              let request = new XMLHttpRequest();
-        request.open("get", "../products.json");
-        request.onload = () => {
-            if (request.status == 200 && request.readyState == 4 && array) {
-                let data = JSON.parse(request.responseText);
-                console.log(data);
-                console.log(array)
-               let numInCart = JSON.parse(localStorage.getItem("addProductToCart")).numOfProduct;
-               let totalPrice = JSON.parse(localStorage.getItem("addProductToCart")).totalPrice;
-               console.log(numInCart , totalPrice)
+    </div>
+  </div>
+
+  <script>
+    let w = JSON.parse(localStorage.getItem("allInCart"));
+
+    let request = new XMLHttpRequest();
+    request.open("get", "../products.json");
+    request.onload = () => {
+      if (request.status == 200 && request.readyState == 4) {
+        let data = JSON.parse(request.responseText);
+        w = JSON.parse(localStorage.getItem("allInCart"));
+        for (let i = 0; i < w.length; i++) {
+          let numInCart = w[i].numOfProduct;
+          let totalPrice = w[i].totalPrice;
+             for (let j = 0 ; j < data.length ;j++) {
+            if (data[j].id == w[i].id) {
               
-                    for (product of data) {
-                        if (product.id == array) {
-                            let content =
-                                `
-                <div class="item" id="${product.id}">
-                        <img class="productImg" src=".${product.productImg}" alt="">
+              document.querySelector(".cart-page .container").innerHTML += addContent(data ,j ,numInCart ,totalPrice);
+            }
+          }
+        }
+      }
+
+      let items = document.querySelectorAll(".item")
+
+    }
+    request.send();
+    function addContent(data ,j ,numInCart ,totalPrice){
+      let content =
+                `
+                <div class="item" id="${data[j].id}">
+                        <img class="productImg" src=".${data[j].productImg}" alt="">
                     <div class="itemInfo">
-                        <p class="productName">${product.productName}</p>
+                        <p class="productName">${data[j].productName}</p>
                         <span class="discount">
-                            <span>${product.priceAfter}</span>
-                            <span>${product.priceBefore}</span>
+                            <span>${data[j].priceAfter}</span>
+                            <span>${data[j].priceBefore}</span>
                         </span>
                         <div style="display:flex; flex-direction: column; margin-top:10px; gap:5px">
                             <span>Total Amount : ${numInCart}</span>
@@ -135,15 +154,9 @@
                     </div>                        
                 </div>
                     `
-                            document.querySelector(".cart-page .container").innerHTML += content;
-                        }
-                    }
-                }
-            
-            let items = document.querySelectorAll(".item")
-
-        }
-        request.send();
-    </script>
+                    return content;
+    }
+  </script>
 </body>
+
 </html>
