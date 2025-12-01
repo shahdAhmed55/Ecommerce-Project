@@ -2,8 +2,8 @@
     import { counter1 as counter, counter2 } from "../scripts/counter.js"
 
 let itemsInCart = [];
+let y = JSON.parse(localStorage.getItem("allInCart"));
 if (localStorage.getItem("allInCart")) {
-  let y = JSON.parse(localStorage.getItem("allInCart"));
   console.log(y);
   for (let i = 0; i < y.length; i++) {
     itemsInCart.push(y[i]);
@@ -54,6 +54,7 @@ request.onload = () => {
   addOneItemToFavourite();
 
   addCartBtn.addEventListener("click", () => {
+    totalPriceInCheckout(y);
     console.log("hi cart")
     let popup = `
                     <P>You add <span style="color:red">${Number(
@@ -169,7 +170,9 @@ function numOfProductInCart(numOfProduct, productPrice) {
     numOfProduct.innerHTML++;
     productsPricefunc(numOfProduct, productPrice);
   });
+
 }
+
 
 function productsPricefunc(numOfProduct, productPrice) {
   numOfProduct = Number(numOfProduct.innerText);
@@ -177,6 +180,16 @@ function productsPricefunc(numOfProduct, productPrice) {
   let res = numOfProduct * productPrice;
   return res;
 }
+
+function totalPriceInCheckout(array) {
+  let totalSum = 0;
+  for (let i = 0; i < array.length; i++) {
+    totalSum += array[i].totalPrice;
+  }
+  console.log(totalSum);
+  localStorage.setItem("totalSum", JSON.stringify(Math.round(totalSum)));
+}
+
 
 function saveInLs(productPrice, numOfProduct) {
   productPrice = productPrice.slice(1);
