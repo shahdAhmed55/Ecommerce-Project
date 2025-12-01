@@ -5,11 +5,11 @@
 @use "../styles/components/footer" as *;
 @use "../styles/allProduct" as *;
 @use "../styles/oneProductDetails" as *;
+@use "../styles/blog" as *;
+@use "../styles/cart" as *;
 
 
 body {
-  // font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-  // "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-family: Arial, Helvetica, sans-serif;
 }
 

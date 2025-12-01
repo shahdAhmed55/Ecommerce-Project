@@ -1,0 +1,93 @@
+@use "./color_and_responsive/colors" as *;
+        .blog-page {
+            padding: 30px 0;
+        }
+
+        .blog-page .box-img {
+            width: 100%;
+        }
+
+        .blog-page .box {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 50px;
+        }
+
+        .blog-page p {
+            color: gray;
+        }
+
+        .blog-page .move-to {
+
+            margin-bottom: 30px;
+        }
+
+        .blog-page .down {
+            display: flex;
+            gap: 30px;
+        }
+        .blog-page .down .left{
+            width: 70%;
+        }
+        .blog-page .down .right{
+            width: 30%;
+        }
+
+        @media (max-width:992px) {
+             .blog-page .down {
+                flex-direction: column;
+                .right{
+                    width: 100%;
+                }
+                .left{
+                    width: 100%;
+                }
+             }
+        }
+         .blog-page .post {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+         .blog-page .post img {
+            width: 75px;
+            height: 75px;
+            object-fit: cover;
+            border-radius: 100%;
+        }
+
+         .blog-page .post p {
+            color: black;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .blog-page .post span {
+            color: gray;
+            font-size: 13px;
+        }
+
+        .blog-page .right .up {
+            margin-bottom: 20px;
+        }
+
+        .blog-page .right .card-box {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .card {
+                padding: 10px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                color: white;
+            }
+        }

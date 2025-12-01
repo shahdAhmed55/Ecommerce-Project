@@ -11,6 +11,7 @@
 
 <body>
 
+    <!-- nav Bar -->
     <header>
         <div class="container">
             <div class="upper">
@@ -45,10 +46,10 @@
             <div class="middle">
                 <div class="left">
                     <div class="store">
-                      <a style="display: flex; gap:10px; align-items:center;" href="../index.html">
-                         <img src="../imgs/Header/logo.svg" alt="">
-                         <h1>jinStore</h1>
-                       </a>
+                        <a style="display: flex; gap:10px; align-items:center;" href="../index.html">
+                            <img src="../imgs/Header/logo.svg" alt="">
+                            <h1>jinStore</h1>
+                        </a>
                     </div>
                     <div class="location">
                         <img src="../imgs/Header/location.svg" alt="">
@@ -60,9 +61,9 @@
                 </div>
                 <input type="text" placeholder="search">
                 <ul>
-<a href="">
+                    <a href="">
                         <li>
-                                <a href="./login.html">
+                            <a href="./login.html">
                                 <img src="../imgs/Header/profile.svg" alt="">
                             </a>
                     </a>
@@ -73,20 +74,20 @@
 
                     </li>
 
-                
-                <li>
-                    <a class="love" href="./favouritePage.html">
-                        <img src="../imgs/Header/love.svg" alt="">
-                    </a>
-                    <span class="counter">0</span>
-                </li>
-                
-                <li>
-                    <a href="./cart.html">
-                        <img src="../imgs/Header/cart.svg" alt="">
+
+                    <li>
+                        <a class="love" href="./favouritePage.html">
+                            <img src="../imgs/Header/love.svg" alt="">
+                        </a>
                         <span class="counter">0</span>
-                    </a>
-                </li>
+                    </li>
+
+                    <li>
+                        <a href="./cart.html">
+                            <img src="../imgs/Header/cart.svg" alt="">
+                            <span class="counter">0</span>
+                        </a>
+                    </li>
 
                 </ul>
             </div>
@@ -125,6 +126,7 @@
             </div>
         </div>
     </header>
+    <!-- contact-page -->
     <main id="contact-page">
         <div class="container">
             <div class="upper-section">
@@ -262,14 +264,14 @@
                 </div>
 
 
-           
+
 
             </div>
         </div>
     </main>
-        <script type="module">
-            import { counter1 as counter, counter2 } from "../scripts/counter.js"
-        fetch("../project_pages/footer.html").then(response=> response.text()).then(data=>{
+    <script type="module">
+        import { counter1 as counter, counter2 } from "../scripts/counter.js"
+        fetch("../project_pages/footer.html").then(response => response.text()).then(data => {
             let footer = document.createElement("footer")
             footer.innerHTML = data;
             document.body.append(footer);
