@@ -139,11 +139,13 @@
                         <a class="love" href="./favouritePage.html">
                             <img src="../imgs/Header/love.svg" alt="">
                         </a>
-                        <span class="counter-love">0</span>
+                        <span class="counter">0</span>
                     </li>
+                    
                     <li>
-                        <a href="">
+                        <a href="./cart.html">
                             <img src="../imgs/Header/cart.svg" alt="">
+                            <span class="counter">0</span>
                         </a>
                     </li>
 
@@ -167,7 +169,7 @@
                         <a href="./allProduct_page.html">Beverages</a>
                     </li>
                     <li>
-                        <a href="">Blog</a>
+                        <a href="./blog_page.html">Blog</a>
                     </li>
                     <li>
                         <a href="./contact_page.html">Contact</a>
@@ -224,16 +226,9 @@
         </div>
     </div>
 
-    <script>
-
-        let counter = document.querySelector(".counter-love");
-        if (localStorage.getItem("faverArayy")) {
-            counter.innerHTML = JSON.parse(localStorage.getItem("faverArayy")).length
-        }
-        else {
-            counter.innerHTML = 0
-        }
-
+   
+    <script  type="module">
+    import { counter1 as counter, counter2 } from "../scripts/counter.js"
         let loginBtn = document.querySelector(".logIn");
         loginBtn.addEventListener("click", () => {
             window.location.href = "./login.html"
@@ -247,7 +242,6 @@
             let username = document.querySelector("input[name=username]").value;
             let email = document.querySelector("input[name=email]").value;
             let password = document.querySelector("input[name=password]").value;
-
             let user = {
                 username: username,
                 email: email,

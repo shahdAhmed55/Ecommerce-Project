@@ -306,6 +306,18 @@
   margin-bottom: 10px;
   font-size: 12px;
 }
+@media (max-width: 992px) {
+  .checkout-page .container .contact-info {
+    flex-wrap: wrap;
+  }
+  .checkout-page .container .contact-info .left {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .checkout-page .container .contact-info .right {
+    width: 100%;
+  }
+}
 
 header {
   font-size: 13px;
@@ -389,7 +401,7 @@ header .container .middle input {
 header .container .middle ul li {
   position: relative;
 }
-header .container .middle ul span {
+header .container .middle ul .counter {
   position: absolute;
   top: -5px;
   right: -5px;
@@ -733,9 +745,10 @@ footer .down-footer .left .icons img {
   gap: 20px;
   padding: 0;
 }
-.product-page .container .product-infos .right h1 {
+.product-page .container .product-infos .right .productName {
   width: 100%;
   word-break: break-all;
+  font-size: 25px;
 }
 .product-page .container .product-infos .right .rate {
   color: gray;
@@ -1289,4 +1302,21 @@ input {
   .item {
     width: 50%;
   }
+}
+
+.noItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 65vh;
+  width: 100vw;
+  width: 100%;
+}
+
+.noItems p {
+  border: 1px gray solid;
+  padding: 10px;
+  border-radius: 20px;
 }/*# sourceMappingURL=main.css.map */

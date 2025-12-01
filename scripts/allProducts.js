@@ -1,11 +1,5 @@
-let counter = document.querySelector(".counter-love");
+import { counter1 as counter, counter2 } from "./counter.js";
 
-
-if (localStorage.getItem("faverArayy")) {
-  counter.innerHTML = JSON.parse(localStorage.getItem("faverArayy")).length;
-} else {
-  counter.innerHTML = 0;
-}
 let numOfShownItems = [];
 let numOfItem = document.querySelector(".num-showed-items span");
 let categories = [
@@ -73,6 +67,7 @@ request.onload = () => {
   if (request.status == 200 && request.readyState == 4) {
     let data = JSON.parse(request.responseText);
     for (let product of data) {
+     
       let output = `
                 <div class="item" id="${product.id}" date-category="${product.dateCategory}">
                         <img class="productImg" src=".${product.productImg}" alt="">
@@ -90,20 +85,20 @@ request.onload = () => {
                             <span>${product.priceAfter}</span>
                             <span>${product.priceBefore}</span>
                         </span>
-                        <img class="addToCart" src=".${product.addCartIcon}" alt="">
                     </div>
-                        <hr class= "${product.classHide}" style="margin-top: 10px;"">
-                        <p  class="run-out ${product.classHide}">This product is about to run out</p>
-                        <hr class= "second ${product.classHide}">
-                        <span class="available ${product.classHide}">available only: <span>${product.available}</span></span>
                 </div>
             `;
       rightDiv.innerHTML += output;
+
+    
+
+      
     }
   }
-
+  let g = JSON.parse(localStorage.getItem("faverArayy"));
   let items = document.querySelectorAll(".item");
-  items.forEach((item) => {
+  items.forEach((item , u ) => {
+    redHeart(item, u , g);
     item.querySelector(".productImg").addEventListener("click", () => {
       window.location.href = `../project_pages/oneProductDetails.html?id=${item.getAttribute(
         "id"
@@ -112,7 +107,6 @@ request.onload = () => {
   });
   filterCheckBoxs(items);
   addToFavourite(items);
-
 
 };
 function filterCheckBoxs(items) {
@@ -148,7 +142,8 @@ function addToFavourite(items) {
   }
   faverBtns.forEach((fb) => {
     fb.addEventListener("click", () => {
-      fb.style.backgroundColor = "red";
+      // fb.style.backgroundColor = "red";
+      fb.src = "../imgs/red-heart.png";
       let itemID =
         fb.parentElement.parentElement.parentElement.getAttribute("id");
       if (!faverArray.includes(Number(itemID))) {
@@ -156,10 +151,21 @@ function addToFavourite(items) {
         faverArray.push(Number(itemID));
       }
       localStorage.setItem("faverArayy", JSON.stringify(faverArray));
+     
     });
   });
 }
 
+
+function redHeart(item ,u , g) {
+     let faverBtns = document.querySelectorAll(".addToFaver");
+     for (let i = 0; i < g.length; i++) {
+       if (Number(item.id) === Number(g[i])) {
+         console.log(g[i]);
+         return (faverBtns[u].src = "../imgs/red-heart.png");
+       }
+     }
+}
 
 
 

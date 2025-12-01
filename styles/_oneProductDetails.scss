@@ -39,9 +39,10 @@ left: 0;
         flex-direction: column;
         gap: 20px;
         padding: 0;
-        h1 {
+        .productName {
           width: 100%;
           word-break: break-all;
+          font-size: 25px;
         //   color: red;
         }
 

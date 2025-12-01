@@ -1,9 +1,5 @@
-let counter = document.querySelector(".counter-love");
-if (localStorage.getItem("faverArayy")) {
-  counter.innerHTML = JSON.parse(localStorage.getItem("faverArayy")).length;
-} else {
-  counter.innerHTML = 0;
-}
+
+    import { counter1 as counter, counter2 } from "../scripts/counter.js"
 
 let itemsInCart = [];
 if (localStorage.getItem("allInCart")) {
@@ -17,6 +13,7 @@ if (localStorage.getItem("allInCart")) {
 let request = new XMLHttpRequest();
 request.open("get", "../products.json");
 
+let g = JSON.parse(localStorage.getItem("faverArayy"));
 request.onload = () => {
   if (request.status == 200 && request.readyState == 4) {
     let data = JSON.parse(request.responseText);
@@ -28,9 +25,57 @@ request.onload = () => {
     let relatedProductContainer = document.querySelector(".related-items");
     for (let i = 0; i < 5; i++) {
       relatedProductContainer.innerHTML += createRelatedItems(products[i]);
+      let items = document.querySelectorAll(".item");
+      items.forEach((item , u) => {
+        redHeart(item, u , g);
+        item.querySelector(".productImg").addEventListener("click", () => {
+          window.location.href = `./oneProductDetails.html?id=${item.getAttribute(
+            "id"
+          )}`;
+        });
+      });
     }
     if (product) {
-      let con = `
+      document.querySelector(".container .product-infos").innerHTML =
+        content(product);
+    }
+  }
+
+
+  let numOfProduct = document.querySelector(".product-num");
+  let productPrice = document.querySelector(".product-price").innerHTML;
+
+  let addCartBtn = document.querySelector(".add-cart-btn");
+  let popUpContainer = document.querySelector(".product-page .popUp");
+
+  // popUpMessage(popUpContainer);
+  numOfProductInCart(numOfProduct, productPrice);
+  addToFavourite();
+  addOneItemToFavourite();
+
+  addCartBtn.addEventListener("click", () => {
+    console.log("hi cart")
+    let popup = `
+                    <P>You add <span style="color:red">${Number(
+                      numOfProduct.innerText
+                    )}</span> product to cart</P>
+                `;
+    popUpContainer.classList.remove("hide");
+    popUpContainer.innerHTML = popup;
+    setTimeout(() => {
+      popUpContainer.classList.add("hide");
+    }, 3000);
+// 
+    saveInLs(productPrice, Number(numOfProduct.innerText));
+  });
+};
+
+request.send();
+let items = [];
+
+
+  function content(product) {
+    return `
             <div class="left">
                 <div class="product-img">
                     <img src=".${product.productImg}" alt="">
@@ -38,7 +83,7 @@ request.onload = () => {
                 <div class="discount-percent">${product.discountPercent}</div>
             </div>
             <div class="right item">
-                <h1>${product.productName}</h1>
+                <h1 class="productName">${product.productName}</h1>
                 <div class="rate">
                     <img src="../imgs/Home/starts.svg" alt="">
                     <span>3.33</span>|<span>sku:E7f8g9h0</span>
@@ -70,7 +115,9 @@ request.onload = () => {
                                 <span class="plus-product">+</span>  
                             </div>
                             <button class="btn green add-cart-btn">Add to cart</button>
-                            <button class="btn black">Buy Now</button>
+                            <a style="width:50%" href = "../project_pages/checkout_page.html">
+                            <button style="width:100%" class="btn black">Buy Now</button>
+                            </a>
                         </div>
                     <div class="payment">
                         <div class="pay">
@@ -105,38 +152,7 @@ request.onload = () => {
                 </div>
 <hr>            
           `;
-      document.querySelector(".container .product-infos").innerHTML = con;
-    }
   }
-  let numOfProduct = document.querySelector(".product-num");
-  let productPrice = document.querySelector(".product-price").innerHTML;
-
-  let addCartBtn = document.querySelector(".add-cart-btn");
-  let popUpContainer = document.querySelector(".product-page .popUp");
-
-  // popUpMessage(popUpContainer);
-  numOfProductInCart(numOfProduct, productPrice);
-  addToFavourite();
-  addOneItemToFavourite();
-
-  addCartBtn.addEventListener("click", () => {
-    let popup = `
-                    <P>You add <span style="color:red">${Number(
-                      numOfProduct.innerText
-                    )}</span> product to cart</P>
-                `;
-    popUpContainer.classList.remove("hide");
-    popUpContainer.innerHTML = popup;
-    setTimeout(() => {
-      popUpContainer.classList.add("hide");
-    }, 3000);
-// 
-    saveInLs(productPrice, Number(numOfProduct.innerText));
-  });
-};
-
-request.send();
-let items = [];
 
 function numOfProductInCart(numOfProduct, productPrice) {
   let minusBtn = document.querySelector(".minus-product");
@@ -164,20 +180,34 @@ function productsPricefunc(numOfProduct, productPrice) {
 
 function saveInLs(productPrice, numOfProduct) {
   productPrice = productPrice.slice(1);
-  console.log(productPrice ,numOfProduct)
+  // console.log(productPrice ,numOfProduct)
   let param = new URLSearchParams(window.location.search);
   let itemid = parseInt(param.get("id"));
+  let productName = document.querySelector(".productName").innerHTML
+  console.log(productName)
 
   let item = {
     id: itemid,
-    totalPrice: (productPrice * numOfProduct),
+    productName: productName,
+    totalPrice: productPrice * numOfProduct,
     numOfProduct: numOfProduct,
   };
-  itemsInCart.push(item);
+  
+  const existItem = itemsInCart.findIndex(cI => cI.id === item.id);
+  console.log(existItem)
+  if (existItem !== -1) {
+    itemsInCart[existItem].totalPrice += item.totalPrice;
+    itemsInCart[existItem].numOfProduct += item.numOfProduct;
+
+  } else {
+    itemsInCart.push(item);
+    counter2.innerHTML++;
+  }
   localStorage.setItem("allInCart", JSON.stringify(itemsInCart));
 }
 
-function createRelatedItems(product) {
+function createRelatedItems(product , item) {
+  // redHeart(item, u, y);
   let RelatedItem = `
                 <div class="item" id="${product.id}" date-category="${product.dateCategory}">
                         <img class="productImg" src=".${product.productImg}" alt="">
@@ -214,7 +244,7 @@ function addToFavourite() {
   let faverBtns = document.querySelectorAll(".addToFaver");
   faverBtns.forEach((fb) => {
     fb.addEventListener("click", () => {
-      fb.style.backgroundColor = "red";
+      fb.src = "../imgs/red-heart.png"
       let itemID =
         fb.parentElement.parentElement.parentElement.getAttribute("id");
 
@@ -251,3 +281,16 @@ fetch("./footer.html")
     footer.innerHTML = data;
     document.body.append(footer);
   });
+
+
+
+function redHeart(item, u, g) {
+    console.log(g)
+    let faverBtns = document.querySelectorAll(".addToFaver");
+    for (let i = 0; i < g.length; i++) {
+      if (Number(item.id) === Number(g[i])) {
+        console.log(g[i]);
+        (faverBtns[u].src = "../imgs/red-heart.png");
+      }
+    }
+  }

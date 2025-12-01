@@ -6,6 +6,7 @@
 @use "../styles/allProduct" as *;
 @use "../styles/oneProductDetails" as *;
 
+
 body {
   // font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
   // "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -462,3 +463,22 @@ input {
           width: 50%;
         }
       }
+
+
+
+    .noItems {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        height: 65vh;
+        width: 100vw;
+        width: 100%;
+    }
+
+   .noItems p {
+        border: 1px gray solid;
+        padding: 10px;
+        border-radius: 20px;
+    }

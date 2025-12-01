@@ -1,12 +1,5 @@
-let counter = document.querySelector(".counter-love");
-console.log(counter);
+import { counter1 as counter, counter2 } from "./counter.js";
 let array = JSON.parse(localStorage.getItem("faverArayy"));
-if (array) {
-  counter.innerHTML = array.length;
-} else {
-  counter.innerHTML = 0;
-}
-
 noItems(array);
 let request = new XMLHttpRequest();
 request.open("get", "../products.json");
@@ -17,7 +10,7 @@ request.onload = () => {
     console.log(array);
     array = JSON.parse(localStorage.getItem("faverArayy"));
     for (let i = 0; i < array.length; i++) {
-      for (product of data) {
+      for (let product of data) {
         if (product.id == array[i]) {
           let content = `
                          <div class="item" id="${product.id}">
@@ -25,7 +18,7 @@ request.onload = () => {
                         <div class="itemInfo">
                             <div class="infos">
                             <div class="classify ${product.classify}" >
-                                <img class="removeFromFaver" src=".${product.loveIcon}" alt="">
+                                <img class="removeFromFaver" src="../imgs/red-heart.png" style="cursor:pointer" alt="">
                                 
                               <span class="${product.classify}">${product.classify}</span>
                             </div>
@@ -87,11 +80,10 @@ function noItems(array) {
   }
 }
 
-
-fetch("../project_pages/footer.html").then(response => 
-  response.text()
-).then(data=>{
-  let footer = document.createElement("footer");
-  footer.innerHTML=data
-document.body.append(footer);
-})
+fetch("../project_pages/footer.html")
+  .then((response) => response.text())
+  .then((data) => {
+    let footer = document.createElement("footer");
+    footer.innerHTML = data;
+    document.body.append(footer);
+  });

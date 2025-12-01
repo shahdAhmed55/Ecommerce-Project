@@ -44,21 +44,7 @@
         }
     }
 
-    .favourite-page .noItems {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        height: 65vh;
-        width: 100vw;
-    }
-
-    .favourite-page .noItems p {
-        border: 1px gray solid;
-        padding: 10px;
-        border-radius: 20px;
-    }
+    
 
     .btn:nth-child(1) {
         background-color: black;
@@ -133,11 +119,13 @@
                         <a class="love" href="./favouritePage.html">
                             <img src="../imgs/Header/love.svg" alt="">
                         </a>
-                        <span class="counter-love">0</span>
+                        <span class="counter">0</span>
                     </li>
+                    
                     <li>
                         <a href="./cart.html">
                             <img src="../imgs/Header/cart.svg" alt="">
+                            <span class="counter">0</span>
                         </a>
                     </li>
 
@@ -182,7 +170,7 @@
         <div class="container">
         </div>
     </div>
-    <script src="../scripts/favouritePage.js"></script>
+    <script src="../scripts/favouritePage.js" type="module"></script>
 </body>
 
 </html>

@@ -10,9 +10,26 @@
   <style>
     .container {
       display: flex;
-      flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+    }
+    .container .products{
+      display: flex;
+       flex-wrap: wrap;
+       padding-bottom: 50px ;
+       width: 100%;
     }
 
+    .icon{
+      cursor: pointer;
+      margin-top: 20px;
+      width: 24px;
+    }
+
+    .cart-page{
+      padding: 50px 0;
+    }
     .item {
       border: 1px solid black;
       padding: 10px;
@@ -101,62 +118,136 @@
 </head>
 
 <body>
+            <header>
+              <div class="container">
+                <div class="upper">
+                  <ul>
+                    <li>
+                      <a href="">About Us</a>
+                    </li>
+                    <li>
+                      <a href="">My Account</a>
+                    </li>
+                    <li>
+                      <a href="">Wishlist</a>
+                    </li>
+                    <li>
+                      <p>we deliver to you every day from <span style="color: orangered;"> 7:00 to 23:00</span></p>
+                    </li>
+                  </ul>
+            
+            
+                  <ul class="settings">
+                    <li>
+                      English
+                    </li>
+                    <li>
+                      USD
+                    </li>
+                    <li>
+                      Order Tracking
+                    </li>
+                  </ul>
+                </div>
+                <div class="middle">
+                  <div class="left">
+                    <div class="store">
+                      <a style="display: flex; gap:10px; align-items:center;" href="../index.html">
+                        <img src="../imgs/Header/logo.svg" alt="">
+                        <h1>jinStore</h1>
+                      </a>
+                    </div>
+                    <div class="location">
+                      <img src="../imgs/Header/location.svg" alt="">
+                      <span class="DeliverTo">
+                        <span style="color: gray;">Deliver to</span>
+                        <span>all</span>
+                      </span>
+                    </div>
+                  </div>
+                  <input type="text" placeholder="search">
+                  <ul>
+                    <a href="">
+                      <li>
+                        <a href="./login.html">
+                          <img src="../imgs/Header/profile.svg" alt="">
+                        </a>
+                    </a>
+                    </li>
+                    <li>
+                      <a href="./register.html" style="color: gray;">sign in</a>
+                      <a href="">account</a>
+            
+                    </li>
+            
+            
+                    <li>
+                      <a class="love" href="./favouritePage.html">
+                        <img src="../imgs/Header/love.svg" alt="">
+                      </a>
+                      <span class="counter">0</span>
+                    </li>
+                    
+                    <li>
+                       <a href="./cart.html">
+                        <img src="../imgs/Header/cart.svg" alt="">
+                        <span class="counter">0</span>
+                      </a>
+                    </li>
+            
+                  </ul>
+                </div>
+            
+                <hr style="width:100%">
+                <div class="bottom">
+            
+                  <ul>
+                    <li>
+                      <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                      <a href="../project_pages/allProduct_page.html">Shop</a>
+                    </li>
+                    <li>
+                      <a href="./allProduct_page.html">Fruits & Vegetables</a>
+                    </li>
+                    <li>
+                      <a href="./allProduct_page.html">Beverages</a>
+                    </li>
+                    <li>
+                      <a href="./blog_page.html">Blog</a>
+                    </li>
+                    <li>
+                      <a href="./contact_page.html">Contact</a>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      trending products
+                    </li>
+                    <li style="color: orangered;">
+                      Almost finished
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </header>
+            
   <div class="cart-page">
     <div class="container">
+      <div class="products">
 
+      </div>
+      <div class="go-to-checOut">
+          <a href="./checkout_page.html">
+            <button class="cartempty btn" style="margin-top:10px">Go To Check-Out </button>
+          </a>
+      </div>
 
     </div>
   </div>
-
-  <script>
-    let w = JSON.parse(localStorage.getItem("allInCart"));
-
-    let request = new XMLHttpRequest();
-    request.open("get", "../products.json");
-    request.onload = () => {
-      if (request.status == 200 && request.readyState == 4) {
-        let data = JSON.parse(request.responseText);
-        w = JSON.parse(localStorage.getItem("allInCart"));
-        for (let i = 0; i < w.length; i++) {
-          let numInCart = w[i].numOfProduct;
-          let totalPrice = w[i].totalPrice;
-             for (let j = 0 ; j < data.length ;j++) {
-            if (data[j].id == w[i].id) {
-              
-              document.querySelector(".cart-page .container").innerHTML += addContent(data ,j ,numInCart ,totalPrice);
-            }
-          }
-        }
-      }
-
-      let items = document.querySelectorAll(".item")
-
-    }
-    request.send();
-    function addContent(data ,j ,numInCart ,totalPrice){
-      let content =
-                `
-                <div class="item" id="${data[j].id}">
-                        <img class="productImg" src=".${data[j].productImg}" alt="">
-                    <div class="itemInfo">
-                        <p class="productName">${data[j].productName}</p>
-                        <span class="discount">
-                            <span>${data[j].priceAfter}</span>
-                            <span>${data[j].priceBefore}</span>
-                        </span>
-                        <div style="display:flex; flex-direction: column; margin-top:10px; gap:5px">
-                            <span>Total Amount : ${numInCart}</span>
-                            <span>Total Price : ${totalPrice}</span>
-                        </div>
-                        <a href="./checkout_page.html">
-                        <button class="btn" style="margin-top:10px">Go To Check-Out </button>
-                        </a>
-                    </div>                        
-                </div>
-                    `
-                    return content;
-    }
-  </script>
+  
+  <script src="../scripts/cart.js" type="module"></script>
 </body>
 
 </html>

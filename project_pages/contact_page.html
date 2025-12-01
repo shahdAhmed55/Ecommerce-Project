@@ -74,17 +74,19 @@
                     </li>
 
                 
-                    <li>
-                               <a class="love" href="./favouritePage.html">
-                            <img src="../imgs/Header/love.svg" alt="">
-                        </a>
-                        <span class="counter-love">0</span>
-                    </li>
-                    <li>
-                      <a href="">
-                          <img src="../imgs/Header/cart.svg" alt="">
-                      </a>
-                    </li>
+                <li>
+                    <a class="love" href="./favouritePage.html">
+                        <img src="../imgs/Header/love.svg" alt="">
+                    </a>
+                    <span class="counter">0</span>
+                </li>
+                
+                <li>
+                    <a href="./cart.html">
+                        <img src="../imgs/Header/cart.svg" alt="">
+                        <span class="counter">0</span>
+                    </a>
+                </li>
 
                 </ul>
             </div>
@@ -123,9 +125,6 @@
             </div>
         </div>
     </header>
-<img src="../imgs/oneProduct/Warranty.png" alt="">
-
-    <!-- <h1>uifroioi</h1> -->
     <main id="contact-page">
         <div class="container">
             <div class="upper-section">
@@ -262,17 +261,14 @@
                     </span>
                 </div>
 
+
+           
+
             </div>
         </div>
     </main>
-    <script>
-        let counter = document.querySelector(".counter-love");
-        if(localStorage.getItem("faverArayy")){
-            counter.innerHTML = JSON.parse(localStorage.getItem("faverArayy")).length 
-        }
-            else{
-            counter.innerHTML = 0
-        }
+        <script type="module">
+            import { counter1 as counter, counter2 } from "../scripts/counter.js"
         fetch("../project_pages/footer.html").then(response=> response.text()).then(data=>{
             let footer = document.createElement("footer")
             footer.innerHTML = data;

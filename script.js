@@ -3,14 +3,7 @@
 // request.send();
 // console.log(request);
 
-let counter = document.querySelector(".counter-love");
-if (localStorage.getItem("faverArayy")) {
-  counter.innerHTML = JSON.parse(localStorage.getItem("faverArayy")).length;
-}
-else{
-  counter.innerHTML = 0;
-}
-
+    import { counter1 as counter, counter2 } from "./scripts/counter.js"
 let disscountIntros = [
   {
     id: 0,
@@ -358,8 +351,3 @@ items.forEach((item) => {
 
 
 
-fetch("./project_pages/footer.html").then(response=> response.text()).then(data=>{
-  let footer = document.createElement("footer");
-  footer.innerHTML = data;
-  document.body.append(footer);
-})
