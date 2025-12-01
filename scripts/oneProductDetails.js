@@ -183,11 +183,13 @@ function productsPricefunc(numOfProduct, productPrice) {
 
 function totalPriceInCheckout(array) {
   let totalSum = 0;
-  for (let i = 0; i < array.length; i++) {
-    totalSum += array[i].totalPrice;
+  if (array) {
+    for (let i = 0; i < array.length; i++) {
+      totalSum += array[i].totalPrice;
+    }
+    console.log(totalSum);
+    localStorage.setItem("totalSum", JSON.stringify(Math.round(totalSum)));
   }
-  console.log(totalSum);
-  localStorage.setItem("totalSum", JSON.stringify(Math.round(totalSum)));
 }
 
 
@@ -298,12 +300,13 @@ fetch("./footer.html")
 
 
 function redHeart(item, u, g) {
-    console.log(g)
-    let faverBtns = document.querySelectorAll(".addToFaver");
-    for (let i = 0; i < g.length; i++) {
-      if (Number(item.id) === Number(g[i])) {
-        console.log(g[i]);
-        (faverBtns[u].src = "../imgs/red-heart.png");
+  if (g) {
+      let faverBtns = document.querySelectorAll(".addToFaver");
+      for (let i = 0; i < g.length; i++) {
+        if (Number(item.id) === Number(g[i])) {
+          console.log(g[i]);
+          faverBtns[u].src = "../imgs/red-heart.png";
+        }
       }
     }
   }

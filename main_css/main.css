@@ -1015,6 +1015,10 @@ footer .down-footer .left .icons img {
   color: white;
 }
 
+.cart-page {
+  padding: 50px 0;
+}
+
 .cart-page .container {
   display: flex;
   justify-content: center;
@@ -1033,10 +1037,6 @@ footer .down-footer .left .icons img {
   cursor: pointer;
   margin-top: 20px;
   width: 24px;
-}
-
-.cart-page .cart-page {
-  padding: 50px 0;
 }
 
 .cart-page .item {

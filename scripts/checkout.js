@@ -1,15 +1,22 @@
 import { counter1 as counter, counter2 } from "../scripts/counter.js";
-fetch("../project_pages/footer.html")
-  .then((response) => response.text())
-  .then((data) => {
-    let footer = document.createElement("footer");
-    footer.innerHTML = data;
-    document.body.append(footer);
-  });
+
 
 let allProductInCart = JSON.parse(localStorage.getItem("allInCart"));
 let totalPrice = document.querySelector(".total-price");
-totalPrice.innerHTML = JSON.parse(localStorage.getItem("totalSum"));
+
+function totalPriceInCheckout(allProductInCart) {
+    if (allProductInCart) {
+        let totalSum = 0;
+      for (let i = 0; i < allProductInCart.length; i++) {
+        totalSum += allProductInCart[i].totalPrice;
+      }
+      console.log(totalSum);
+        localStorage.setItem("totalSum", JSON.stringify(Math.round(totalSum)));
+        return Math.round(totalSum);
+    }
+}
+totalPrice.innerHTML = `${totalPriceInCheckout(allProductInCart)} $`;
+
 
 let productName = document.querySelector(".paidProjects");
 for (let i = 0; i < allProductInCart.length; i++) {
@@ -28,3 +35,12 @@ for (let i = 0; i < allProductInCart.length; i++) {
 
   productName.innerHTML += content;
 }
+
+
+fetch("../project_pages/footer.html")
+  .then((response) => response.text())
+  .then((data) => {
+    let footer = document.createElement("footer");
+    footer.innerHTML = data;
+    document.body.append(footer);
+  });

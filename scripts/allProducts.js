@@ -158,11 +158,13 @@ function addToFavourite(items) {
 
 
 function redHeart(item ,u , g) {
-     let faverBtns = document.querySelectorAll(".addToFaver");
-     for (let i = 0; i < g.length; i++) {
-       if (Number(item.id) === Number(g[i])) {
-         console.log(g[i]);
-         return (faverBtns[u].src = "../imgs/red-heart.png");
+  if (g) {
+       let faverBtns = document.querySelectorAll(".addToFaver");
+       for (let i = 0; i < g.length; i++) {
+         if (Number(item.id) === Number(g[i])) {
+           console.log(g[i]);
+           return (faverBtns[u].src = "../imgs/red-heart.png");
+         }
        }
      }
 }
